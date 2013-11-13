@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
+body{
+ background-color: #d3d3d3;
+}
+.barraLat{
+    background-color: #e6e6e6;
+    color: #000000;
+    font-family: 'Fjalla One', sans-serif;
+}
+.tbLat{
+    background-color: #e6e6e6;
+    color: #000000;
+    font-family: 'Fjalla One', sans-serif;
+}
+.tbLat:hover{
+    background-color: #d3d3d3;
+    color: #ffffff;
+    cursor: pointer;
+}

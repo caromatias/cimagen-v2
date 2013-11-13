@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/est.css">
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/jquery-latest.js"></script>
+        <script type="text/javascript">
+            function menu()
+            {
+                document.getElementById('equipo').className = 'tdmenueact';
+            }
+            function movP2()
+            {
+                $('#ima1').fadeOut('slow');
+                $('#ima3').fadeOut('slow');
+                document.getElementById('td1').className = "";
+                document.getElementById('td2').className = "";
+                document.getElementById('td3').className = "";
+                setTimeout(function() {
+                    document.getElementById('ima2').className = 'movido sombra';
+                }, 500);
+                setTimeout("$('#trian').fadeIn('slow');", 1000);
+                setTimeout("$('#p2').fadeIn('slow');", 1000);
+            }
+            function movP3()
+            {
+                $('#ima2').fadeOut('slow');
+                $('#ima1').fadeOut('slow');
+                document.getElementById('td1').className = "";
+                document.getElementById('td2').className = "";
+                document.getElementById('td3').className = "";
+                setTimeout(function() {
+                    document.getElementById('ima3').className = 'movidoP3 sombra';
+                }, 500);
+                //document.getElementById('i3').className = "movidoP3";
+                $('#i1').fadeOut('slow');
+                setTimeout("$('#trian').fadeIn('slow');", 1000);
+                setTimeout("$('#p3').fadeIn('slow');", 1000);
+            }
+            function devP2()
+            {
+                $('#p2').fadeOut('slow');
+                $('#i1').fadeIn('slow');
+                $('#trian').fadeOut('slow');
+                document.getElementById('ima2').className = 'mover sombra';
+                document.getElementById('infoP2').className = 'mover';
+                setTimeout(function() {
+                    document.getElementById('td1').className = "sombra";
+                }, 1000);
+                setTimeout(function() {
+                    document.getElementById('td2').className = "sombra";
+                }, 1000);
+                setTimeout(function() {
+                    document.getElementById('td3').className = "sombra";
+                }, 1000);
+                setTimeout(function() {
+                    $('#ima1').fadeIn('slow');
+                }, 1000);
+                setTimeout(function() {
+                    $('#ima3').fadeIn('slow');
+                }, 1000);
+            }
+            function devP3()
+            {
+                $('#trian').fadeOut('slow');
+                $('#p3').fadeOut('slow');
+                $('#i1').fadeIn('slow');
+                setTimeout(function() {
+                    $('#ima1').fadeIn('slow');
+                    $('#ima2').fadeIn('slow');
+                }, 1000);
+                document.getElementById('ima3').className = 'mover sombra';
+                document.getElementById('infoP3').className = 'mover';
+                //document.getElementById('i3').className = "mover";
+                setTimeout(function() {
+                    document.getElementById('td1').className = "sombra";
+                }, 1000);
+                setTimeout(function() {
+                    document.getElementById('td2').className = "sombra";
+                }, 1000);
+                setTimeout(function() {
+                    document.getElementById('td3').className = "sombra";
+                }, 1000);
+            }
+            function ejecvas()
+            {
+                var usr = window.location.hash.substring(1);
+                if (usr == "ejecutivas")
+                {
+                    //document.getElementById('centro').style.display = "none";
+                    document.getElementById('ejecvas').style.display = "block";
+                    document.getElementById('ejecu').style.color = "#FFFFFF";
+                    document.getElementById('ejecu').style.fontWeight = "700";
+                    document.getElementById('soci').style.color = '#FFD4E2';
+                    document.getElementById('ejecu').style.fontSize = '18px';
+                    document.getElementById('soci').style.fontSize = '14px';
+                    ///////////
+                    devP2();
+                    devP3();
+                    $('#p1').fadeOut('slow');
+                    $('#trian').fadeOut('slow');
+                    $('#ima2').fadeIn('slow');
+                    $('#ima3').fadeIn('slow');
+                }
+                else if (usr == "socias")
+                {
+                    document.getElementById('ejecu').style.color = '#FFD4E2';
+                    document.getElementById('soci').style.color = '#FFFFFF';
+                    document.getElementById('soci').style.fontWeight = "700";
+                    document.getElementById('ejecu').style.fontSize = '14px';
+                    document.getElementById('soci').style.fontSize = '18px';
+                }
+            }
+        </script>
+    </head>
+    <body onload="menu();
+        setInterval('ejecvas()', 100);">
+        <div id="contenedorPrimario" style="position: relative;">
+
+            <div id="infoP1" class="mover" style="position: absolute; top: 495px; float: right;z-index: 99;left: 295px;">
+                <label style="font-family: 'Sintony', sans-serif; font-size: 14px;">SOCIA<br/>
+                    DIRECTORA EJECUTIVA<br/>
+                    <a href="mailto:ichocano@cimagen.cl" style="text-decoration: none; color: #000000;">ichocano@cimagen.cl</a><br/>
+                    V.Card
+                </label>
+            </div>
+            <div id="infoP2" class="mover" style="position: absolute; top: 495px; float: right;z-index: 99;left: 505px;">
+                <label style="font-family: 'Sintony', sans-serif; font-size: 14px;">SOCIA<br/>
+                    DIRECTORA EJECUTIVA<br/>
+                    <a href="mailto:acorrea@cimagen.cl" style="text-decoration: none; color: #000000;">acorrea@cimagen.cl</a><br/>
+                    V.Card
+                </label>
+            </div>
+            <div id="infoP3"  style="position: absolute; top: 495px; float: right;z-index: 99;left: 715px;">
+                <label style="font-family: 'Sintony', sans-serif; font-size: 14px;">SOCIA<br/>
+                    DIRECTORA EJECUTIVA<br/>
+                    <a href="mailto:mcruzat@cimagen.cl" style="text-decoration: none; color: #000000;">mcruzat@cimagen.cl</a><br/>
+                    V.Card
+                </label>
+            </div>
+            <div id="trian" class="triangulo_der_soc" style="position: absolute; top: 164px; z-index: 99;left: 295px;width: 0px; height: 0px;display: none;">
+            </div>
+            <div id="ejecvas" style="position: absolute; top: 152px; float: right;z-index: 99;left: 295px; display: none;">
+                <div style="margin: 0 auto;background-color: #ffffff; width: 685px; height: 430px; text-align: center;">
+                    <table style="width: 685px;height: 332px;" border="0px">
+                        <tbody><tr>
+                                <td style="vertical-align: top;">
+                                    <table id="epag1" style="width: 400px;height: 330px; padding-top: 5px;position: absolute;" border="0px">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+                                                    <img src="recursos/ejecvas/catalina_troncoso.jpg" style="width: 125px; height: 155px;"/>
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+                                                    <img src="recursos/ejecvas/ana_maria_blanco.jpg" style="width: 125px; height: 155px;"/>
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+                                                    <img src="recursos/ejecvas/catalina_cea.jpg" style="width: 125px; height: 155px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+                                                    <img src="recursos/ejecvas/antonella_maggi.jpg" style="width: 125px; height: 155px;"/>
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+                                                    <img src="recursos/ejecvas/maria_elena_montory.jpg" style="width: 125px; height: 155px;"/>
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+                                                    <img src="recursos/ejecvas/maria_jose_urcelay.jpg" style="width: 125px; height: 155px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="text-align: right;">
+                                                    <div id='sigue' style="margin-left: 95%;" class='triangulo_der_por tooltip' onclick="$('#epag1').fadeOut();
+                                            $('#epag2').fadeIn();"><span>Siguiente</span></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!------------------------------/////////////////////////////////////////------------------------->
+                                    <table id="epag2" style="width: 400px;height: 330px; padding-top: 5px;position: absolute;display: none;" border="0px">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+                                                    <img src="recursos/ejecvas/ana_maria_blanco.jpg" style="width: 125px; height: 155px;"/>
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+
+                                                </td>
+                                                <td style="width: 130px; height: 161px; vertical-align: bottom;">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="text-align: right;">
+                                                    <div id='sigue' style="margin-left: 95%;" class='triangulo_izq_por tooltip' onclick="$('#epag2').fadeOut();
+                                            $('#epag1').fadeIn();"><span>Anterior</span></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td style="text-align: left; vertical-align: bottom; width: 245px;">
+                                    <label style="font-size: 13px; font-family: 'Sintony', sans-serif;">
+                                        <strong><font style="color: #727272;">Administradora</font></strong><br/>
+                                        <font style="color: #727272">CATALINA TRONCOSO</font><br/>
+                                        <strong><font style="font-size: 12px;color: #545454;"><a style="font-size: 12px;font-weight: normal;color: #545454;text-decoration: none;" href="mailto:ctroncoso@cimagen.cl">ctroncoso@cimagen.cl</a> - V.Card</font></strong>
+                                        <br/><br/>
+                                    </label>
+                                    <label style="font-size: 13px; line-height: 23px;font-family: 'Sintony', sans-serif;">
+                                        <strong><font style="color: #727272;">Periodistas</font></strong><br/>
+                                        <font style="color: #8c8c8c">ANA MARÍA BLANCO</font><br/>
+                                        <strong><font style="font-size: 12px;color: #545454;">
+                                            <a style="font-size: 12px;font-weight: normal;color: #545454;text-decoration: none;" href="mailto:ablanco@cimagen.cl">ablanco@cimagen.cl</a>
+                                            - V.Card</font></strong>
+                                        <br/>
+                                        <font style="color: #727272">CATALINA CEA</font><br/>
+                                        <strong><font style="font-size: 12px;color: #545454;">
+                                            <a style="font-size: 12px;font-weight: normal;color: #545454;text-decoration: none;" href="mailto:ccea@cimagen.cl">ccea@cimagen.cl</a>
+                                            - V.Card</font></strong>
+                                        <br/>
+                                        <font style="color: #727272">ANTONELLA MAGGI</font><br/>
+                                        <strong><font style="font-size: 12px;color: #545454;">
+                                            <a style="font-size: 12px;font-weight: normal;color: #545454;text-decoration: none;" href="mailto:amaggi@cimagen.cl">amaggi@cimagen.cl</a>
+                                            - V.Card</font></strong>
+                                        <br/>
+                                        <font style="color: #727272">MARÍA ELENA MONTORY</font><br/>
+                                        <strong><font style="font-size: 12px;color: #545454;">
+                                            <a style="font-size: 12px;font-weight: normal;color: #545454;text-decoration: none;" href="mailto:mmontory@cimagen.cl">mmontory@cimagen.cl</a>
+                                            - V.Card</font></strong>
+                                        <br/>
+                                        <font style="color: #727272">MARÍA JOSÉ URCELAY</font><br/>
+                                        <strong><font style="font-size: 12px;color: #545454;">
+                                            <a style="font-size: 12px;font-weight: normal;color: #545454;text-decoration: none;" href="mailto:murcelay@cimagen.cl">murcelay@cimagen.cl</a>
+                                            - V.Card</font></strong>
+                                        <br/>
+                                        <font style="color: #727272">CATALINA GOIC</font><br/>
+                                        <strong><font style="font-size: 12px;color: #545454;">
+                                            <a style="font-size: 12px;font-weight: normal;color: #545454;text-decoration: none;" href="mailto:cgoic@cimagen.cl">cgoic@cimagen.cl</a>
+                                            - V.Card</font></strong>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </div>
+            </div>
+
+            <div id="p1"  style="position: absolute; top: 140px; float: right;z-index: 99;left: 500px; display: none;">
+                <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
+                    <div style="width: 450px; margin: 0 auto; text-align: left;">
+                        <div style="float: right;">
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="$('#p1').fadeOut('slow');
+                            $('#trian').fadeOut('slow');
+                            $('#ima2').fadeIn('slow');
+                            $('#ima3').fadeIn('slow');">
+                                Volver<span>Atras</span>
+                            </label>
+                        </div>
+                        <br/>
+                        <div style="width: 410px;">
+                            <label style="font-family: 'Sintony', sans-serif; font-size: 12px;">
+                                Directora ejecutiva, fundadora y copropietaria de Cimagen Comunicaciones.
+                                <br/><br/>
+                                Graduada de la Universidad Finis Terrea, Santiago de Chile, en Ciencias
+                                Sociales y Periodismo, con Mención Honrosa. También es Diplomada en
+                                Comunicación Corporativa de la Universidad Católica de Chile. De nacionalidad Peruana, reside en Chile desde 1990.
+                                <br/><br/>
+                                Inició sus actividades profesionales en diciembre de 1995 en el Departamento de Estudios diario Estrategia.
+                                </br><br/>
+                                En enero de 1997 se incorporó al diario El Mercurio como colaboradora permanente, publicando artículos en la sección de Economía y Negocios.
+                                <br/><br/>
+                                Sus actividades en el área de comunicación corporativa se inician en 1999, desempeñándose como consultora independiente de la Cámara de Comercio de México en Chile, Mitsubishi Motors Chile, Daewoo Motor Chile y Drake Beam, Morin Chile.
+                                <br/>
+                                Se graduó en el Colegio Santa Ursula, en Lima Perú.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="p2"  style="position: absolute; top: 140px; float: right;z-index: 99;left: 500px; display: none;">
+                <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
+                    <div style="width: 450px; margin: 0 auto; text-align: left;">
+                        <div style="float: right;">
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="devP2();">
+                                Volver<span>Atras</span>
+                            </label>
+                        </div>
+                        <br/>
+                        <div style="width: 410px;">
+                            <label style="font-family: 'Sintony', sans-serif; font-size: 12px;">
+                                Directora ejecutiva, fundadora y copropietaria de Cimagen Comunicaciones.
+                                <br/><br/>
+                                Graduada de la Universidad Finis Terrea, Santiago de Chile, en Ciencias Sociales y Periodismo, con Mención Honrosa.
+                                <br/><br/>
+                                Inicia sus actividades profesionales en diciembre de 1993, en el diario El Mercurio de Santiago. Fue periodista de Vida Social hasta su matrimonio en mayo de 1994. Se reintegra al diario en Marzo de 1995 incorporándose a revista Vivienda y Decoración.
+                                <br/><br/>
+                                En marzo de 1999 ingresa a la Sociedad de Instrucción Primaria, donde desarrolló un programa de comunicaciones para fortalecer las contribuciones del sector privado en la creación de nuevas escuelas. En marzo de 2000 se incorpora a la Universidad Finis Terrea, a cargo del proyecto de la Revista Universitaria de la entidad, publicando su primer número en junio del mismo año.
+                                <br/><br/>
+                                Cursó estudios secundarios en el Colegio Villa María Academy, Santiago de Chile. Y durante estos años, se ha recibido de varios Programas Culturales de la Universidad Adolfo Ibáñez.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="p3"  style="position: absolute; top: 140px; float: right;z-index: 99;left: 500px; display: none;">
+                <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
+                    <div style="width: 450px; margin: 0 auto; text-align: left;">
+                        <div style="float: right;">
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="devP3();">
+                                Volver<span>Atras</span>
+                            </label>
+                        </div>
+                        <br/>
+                        <div style="width: 410px;">
+                            <label style="font-family: 'Sintony', sans-serif; font-size: 12px;">
+                                Directora Ejecutiva, socia de Cimagen Comunicaciones. Graduada de la Universidad Finis Terrea, Santiago de Chile, en Ciencias Sociales y Periodismo, con Mención Honrosa.<br/><br/>
+                                En 1991 se incorpora a TVN como productora periodística del Departamento de Prensa trabajando dos años en el programa Informe Especial, espacio líder en sintonía en programas de periodismo investigativo. Posteriormente es productora periodística de todos los noticiarios de 24 Horas y programas especiales como La Entrevista del Domingo, Vida y La  Historia de la Noticia. Además, participa en la coordinación y producción de importantes eventos del quehacer nacional como por ejemplo Elecciones Presidenciales, Parlamentarias y Municipales entre otros. <br/><br/>
+                                En 2002 ingresó a Nexos Comunicaciones como ejecutiva de cuentas a cargo de importantes actores del sector financiero, retail y sector alimenticio.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="titulo" style="position: relative;">
+                <br/>
+
+                <img src="recursos/logos/2.jpg" style="padding-left: 10px;
+                     ">
+            </div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <table border="0px" style="position: absolute;left: -5px;width: 100%; height: 400px;top: 158px; border-collapse: separate;
+                   border-spacing: 5px;
+                   border-collapse: expression('separate', cellSpacing = '5px');">
+                <tr>
+                    <td id="quienesSomos" class="tdmenu" valign="bottom" style="width: 42px;" onclick="window.location.href = 'home.html#qs';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">QUIENES&nbsp;SOMOS</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td id="equipo" class="tdmenue" style="width: 42px;">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">EQUIPO&nbsp;<a href="#socias" style="text-decoration: none; color: #FFFFFF; cursor: pointer;" onclick="document.getElementById('ejecvas').style.display = 'none';"><font id="soci" style="font-size: 16px; font-weight: bold;">Socias</font></a>&nbsp;&nbsp;<a href="#ejecutivas" style="text-decoration: none; color: #FFD4E2;"><font id="ejecu" style="font-size: 14px;">Ejecutivas</font></a></h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenus" style="width: 42px;" onclick="window.location.href = 'servicios.html';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">SERVICIOS</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenup" style="width: 42px;" onclick="window.location.href = 'portafolio/';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">PORTAFOLIO</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenuc" style="width: 42px;" onclick="window.location.href = 'clientes/';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">CLIENTES</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenuco" style="width: 42px;" onclick="window.location.href = 'contacto.html';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">CONTACTO</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <table border="0px" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td id="td1" onclick="$('#p1').fadeIn('slow');
+                                $('#trian').fadeIn('slow');
+                                $('#ima2').fadeOut('slow');
+                                $('#ima3').fadeOut('slow');" class="sombra" style="border-bottom: 1px solid #FFFFFF; vertical-align: top;width: 200px;">
+                                    <div id="ima1" style="display: table-cell;vertical-align: bottom;cursor: pointer;width: 200px; height: 319px; background-image: url('recursos/socias/i-chocano.jpg');">
+                                        <div id="i1" style="background:rgba(0,0,0,0.2);width: 200px; height: 65px;">
+                                            <label style="color: #FFFFFF;font-size: 18px; font-family: 'Sintony', sans-serif;font-weight: 500;">
+                                                INÉS CHOCANO<br/>
+                                                LA ROSA
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width: 10px;"></td>
+                                <td id="td2" onclick="movP2();" class="sombra" style="border-bottom: 1px solid #FFFFFF; vertical-align: top; width: 200px;">
+                                    <div id="ima2" style="display: table-cell;vertical-align: bottom;cursor: pointer;width: 200px; height: 319px; background-image: url('recursos/socias/a-correa.jpg');">
+                                        <div id="i2" style="background:rgba(0,0,0,0.2);width: 200px; height: 65px;">
+                                            <label style="color: #FFFFFF;font-size: 18px; font-family: 'Sintony', sans-serif;font-weight: 500;">
+                                                ALICIA CORREA<br/>
+                                                LARRAÍN
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width: 10px;"></td>
+                                <td id="td3" onclick="movP3();" class="sombra" style="border-bottom: 1px solid #FFFFFF; vertical-align: top; width: 200px;">
+                                    <div id="ima3" style="display: table-cell;vertical-align: bottom;cursor: pointer;width: 200px; height: 319px; background-image: url('recursos/socias/m-cruzat.jpg');">
+                                        <div id="i3" class="mover" style="background:rgba(0,0,0,0.2);width: 200px; height: 65px;">
+                                            <label style="color: #FFFFFF;font-size: 18px; font-family: 'Sintony', sans-serif;font-weight: 500;">
+                                                MARÍA IGNACIA<br/>
+                                                CRUZAT
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--
+                        <div>
+                            <div id="centro" style="width: 700px; height: 320px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src="recursos/socias/i-chocano.jpg" class="sombra" title="i-chocano" style="border: 3px solid #FFFFFF;cursor: pointer;width: 200px; height: 320px;" onclick="$('#p1').fadeIn('slow');$('#trian').fadeIn('slow');">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src="recursos/socias/a-correa.jpg" id="ima2" title="Slide1" class="mover sombra" style="border: 3px solid #FFFFFF;width: 200px; height: 320px;" onclick="movP2();">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src="recursos/socias/m-cruzat.jpg" title="Slide1" id="ima3" class="mover sombra" style="border: 3px solid #FFFFFF;width: 200px; height: 320px;" onclick="movP3();">
+                            </div>
+                        </div>
+                        -->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="height: 187px; vertical-align: bottom;text-align: center;">
+                        <label style="font-size: 13px;font-family: miFuente;position: absolute;left: 283px;">DON CARLOS 3171, OF B / LAS CONDES, STGO / TEL: (56 2) 2249 76 55 - (56 2) 2245 10 83</label>
+                        <div style="float: right; margin-right: 9px;">
+                            <img src="recursos/img/f_logo.png" title="Facebook" style="width: 28px; height: 28px;">
+                            <img src="recursos/img/twitter.png" title="Twitter" style="width: 28px; height: 28px;">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

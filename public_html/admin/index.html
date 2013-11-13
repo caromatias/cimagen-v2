@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Administración Cimagen</title>
+    <meta charset="UTF-8"/>
+    <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
+    <script type='text/javascript' src='../js/jquery-latest.js'></script>
+    <link rel="stylesheet" type="text/css" href="../css/est.css">
+    <script type="text/javascript" src="../js/global.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/modern.css">
+    <link rel="stylesheet" type="text/css" href="../css/modern-responsive.css">
+    <script type="text/javascript">
+        function alerti(url)
+        {
+            switch(url)
+            {
+                case '1':
+                    document.getElementById('men').style.display = "block";
+                    $('#mensajeInicio').html('Sesion cerrada correctamente.');
+                    break;
+                case 'err01':
+                    document.getElementById('men').style.display = "block";
+                    $('#mensajeInicio').html('Usuario o contraseña incorrectos.');
+                    break;
+                case 'not':
+                    document.getElementById('men').style.display = "block";
+                    $('#mensajeInicio').html('Debe iniciar sesion primero');
+                    break;
+                case 'err1':
+                    document.getElementById('men').style.display = "block";
+                    $('#mensajeInicio').html('Sesion cerrada correctamente');
+                    break;
+            }
+        }
+    </script>
+</head>
+<body onload="alerti(location.search.substring(1));">
+<div class="pop" style="position:absolute;top: 50%;left: 50%;width:400px;margin-top:-200px;margin-left: -200px;">
+    <div class="somb">
+        <form name="login" method="post" action="procesos/proclogin.php">
+            <center>
+                <table border="0px">
+                    <tr>
+                        <td colspan="2">
+                            <br/>
+                            <div id="titulo" style="position: relative; bottom: 25px; left: 20px;">
+                                <div style="position: absolute; left: 100px; top: 15px;">
+                                    <label class="cimagen" style="font-size: 40px;">c<font style="color: #f78e1e">i</font>magen</label><br>
+                                </div>
+                                <div style="position: absolute; left: 106px; top: 19px;">
+                                    <label class="subrayado" style="font-size: 27px;">_______</label><br>
+                                </div>
+                                <div style="position: absolute; left: 206px; top: 21px;">
+                                    <label class="subrayado" style="font-size: 21px;">____</label><br>
+                                </div>
+                                <div style="position: absolute; left: 104px; top: 38px;">
+                                    <label class="subtitulo" style="font-size: 13px;">comunicación</label><br>
+                                </div>
+                                <div style="position: absolute; left: 208px; top: 38px;">
+                                    <label class="subtitulo" style="font-size: 12px;">integral</label><br>
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br/>
+                            <div class="input-control text" style="width: 330px;">
+                                <input type="text" required title="Debe ingresar su nombre de usuario" name="usuario" id="usuario" placeholder="Nombre de usuario" style="width: 330px;"/>
+                                <button class="helper" type="button" tabindex="-1" onclick="document.getElementById('usuario').value = null;document.getElementById('usuario').focus();"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;">
+                            <div class="input-control password" style="width: 200px;">
+                                <input type="password" required="true" name="pass" id="pass" placeholder="Contraseña" style="width: 200px;"/>
+                                <button class="helper" type="button" tabindex="-1" onmousedown="document.getElementById('pass').type = 'text'" onmouseup="document.getElementById('pass').type = 'password'; document.getElementById('pass').focus();"></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <input type="submit" id="login" name="login" style="width: 109px;" value="Iniciar Sesion"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <div>
+                    <center>
+                        <div id="men" class="menerror" style="display: none; width: 250px;">
+                            <span id='mensajeInicio' style='color:red;'></span>
+                        </div>
+                    </center>
+                </div>
+                <br/>
+            </center>
+        </form>
+    </div>
+</div>
+</body>
+</html>
