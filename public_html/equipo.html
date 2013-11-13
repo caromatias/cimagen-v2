@@ -87,33 +87,50 @@
             function ejecvas()
             {
                 var usr = window.location.hash.substring(1);
-                if (usr == "asociasdas")
-                {
-                    //document.getElementById('centro').style.display = "none";
-                    //document.getElementById('ejecvas').style.display = "block";
-                    $('#ejecvas').fadeIn();
-                    document.getElementById('ejecu').style.color = "#FFFFFF";
-                    document.getElementById('ejecu').style.fontWeight = "700";
-                    document.getElementById('soci').style.color = '#FFD4E2';
-                    document.getElementById('ejecu').style.fontSize = '14px';
-                    document.getElementById('soci').style.fontSize = '12px';
-                    ///////////
-                    devP2();
-                    devP3();
-                    $('#p1').fadeOut('slow');
-                    $('#trian').fadeOut('slow');
-                    $('#ima2').fadeIn('slow');
-                    $('#ima3').fadeIn('slow');
-                }
-                else if (usr == "socias")
-                {
-                    document.getElementById('ejecu').style.color = '#FFD4E2';
-                    document.getElementById('soci').style.color = '#FFFFFF';
-                    document.getElementById('soci').style.fontWeight = "700";
-                    document.getElementById('ejecu').style.fontSize = '12px';
-                    document.getElementById('soci').style.fontSize = '14px';
-                    $('#ejecvas').fadeOut();
-                    //document.getElementById('ejecvas').style.display = 'none';
+                switch (usr) {
+                    case 'asociadas':
+                        //document.getElementById('centro').style.display = "none";
+                        //document.getElementById('ejecvas').style.display = "block";
+                        $('#ejecvas').fadeIn();
+                        document.getElementById('ejecu').style.color = "#FFFFFF";
+                        document.getElementById('ejecu').style.fontWeight = "700";
+                        document.getElementById('soci').style.color = '#FFD4E2';
+                        document.getElementById('period').style.color = '#FFD4E2';
+                        document.getElementById('ejecu').style.fontSize = '14px';
+                        document.getElementById('soci').style.fontSize = '12px';
+                        ///////////
+                        devP2();
+                        devP3();
+                        $('#p1').fadeOut('slow');
+                        $('#trian').fadeOut('slow');
+                        $('#ima2').fadeIn('slow');
+                        $('#ima3').fadeIn('slow');
+                        break;
+                    case 'socias':
+                        document.getElementById('ejecu').style.color = '#FFD4E2';
+                        document.getElementById('soci').style.color = '#FFFFFF';
+                        document.getElementById('period').style.color = '#FFD4E2';
+                        document.getElementById('soci').style.fontWeight = "700";
+                        document.getElementById('ejecu').style.fontSize = '12px';
+                        document.getElementById('soci').style.fontSize = '14px';
+                        $('#periodistas').fadeOut();
+                        $('#ejecvas').fadeOut();
+                        //document.getElementById('ejecvas').style.display = 'none';
+                        break;
+                    case 'periodistas':
+                        document.getElementById('ejecu').style.color = '#FFD4E2';
+                        document.getElementById('soci').style.color = '#FFD4E2';
+                        document.getElementById('period').style.color = '#FFFFFF';
+                        document.getElementById('soci').style.fontWeight = "700";
+                        document.getElementById('ejecu').style.fontSize = '12px';
+                        document.getElementById('soci').style.fontSize = '14px';
+                        $('#ejecvas').fadeOut();
+                        $('#periodistas').fadeIn();
+                        //document.getElementById('ejecvas').style.display = 'none';
+                        break;
+                    default:
+                        alert('nada');
+                        break;
                 }
             }
         </script>
@@ -176,7 +193,7 @@
                                             <tr>
                                                 <td colspan="3" style="text-align: right;">
                                                     <div id='sigue' style="margin-left: 95%;" class='triangulo_der_por tooltip' onclick="$('#epag1').fadeOut();
-                                            $('#epag2').fadeIn();"><span>Siguiente</span></div>
+                                                            $('#epag2').fadeIn();"><span>Siguiente</span></div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -209,7 +226,7 @@
                                             <tr>
                                                 <td colspan="3" style="text-align: right;">
                                                     <div id='sigue' style="margin-left: 95%;" class='triangulo_izq_por tooltip' onclick="$('#epag2').fadeOut();
-                                            $('#epag1').fadeIn();"><span>Anterior</span></div>
+                                                            $('#epag1').fadeIn();"><span>Anterior</span></div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -259,15 +276,18 @@
                         </tbody></table>
                 </div>
             </div>
+            <div id="periodistas" style="position: absolute; top: 152px; float: right;z-index: 99;left: 295px; display: none;background-color: #FFFFFF;width: 730px;height: 430px;">
+
+            </div>
 
             <div id="p1"  style="position: absolute; top: 140px; float: right;z-index: 99;left: 500px; display: none;">
                 <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
                     <div style="width: 450px; margin: 0 auto; text-align: left;">
                         <div style="float: right;">
                             <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="$('#p1').fadeOut('slow');
-                            $('#trian').fadeOut('slow');
-                            $('#ima2').fadeIn('slow');
-                            $('#ima3').fadeIn('slow');">
+                                    $('#trian').fadeOut('slow');
+                                    $('#ima2').fadeIn('slow');
+                                    $('#ima3').fadeIn('slow');">
                                 Volver<span>Atras</span>
                             </label>
                         </div>
@@ -357,7 +377,13 @@
                     <td id="equipo" class="tdmenue" style="width: 42px;">
                         <div style="position: relative; width: 42px;">
                             <div style="position: absolute; top: -80px; left: 7px;">
-                                <h4 class="vertical_css3 menuColor">EQUIPO&nbsp;<a href="#socias" style="text-decoration: none; color: #FFFFFF; cursor: pointer;" onclick="setTimeout(function (){ejecvas();},300);"><font id="soci" style="font-size: 14px; font-weight: bold;">Socias</font></a>&nbsp;&nbsp;<a href="#asociasdas" onclick="setTimeout(function (){ejecvas();},300);" style="text-decoration: none; color: #FFD4E2;"><font id="ejecu" style="font-size: 12px;">Asociadas</font></a>&nbsp;&nbsp;<a href="#periodistas" onclick="setTimeout(function (){ejecvas();},300);" style="text-decoration: none; color: #FFD4E2;"><font id="ejecu" style="font-size: 12px;">Periodistas</font></a></h4>
+                                <h4 class="vertical_css3 menuColor">EQUIPO&nbsp;<a href="#socias" style="text-decoration: none; color: #FFFFFF; cursor: pointer;" onclick="setTimeout(function() {
+                                            ejecvas();
+                                        }, 300);"><font id="soci" style="font-size: 14px; font-weight: bold;">Socias</font></a>&nbsp;&nbsp;<a href="#asociadas" onclick="setTimeout(function() {
+                                                    ejecvas();
+                                                }, 300);" style="text-decoration: none; color: #FFD4E2;"><font id="ejecu" style="font-size: 12px;">Asociadas</font></a>&nbsp;&nbsp;<a href="#periodistas" onclick="setTimeout(function() {
+                                                            ejecvas();
+                                                        }, 300);" style="text-decoration: none; color: #FFD4E2;"><font id="period" style="font-size: 12px;">Periodistas</font></a></h4>
                             </div>
                         </div>
                     </td>
@@ -393,9 +419,9 @@
                         <table border="0px" cellspacing="0" cellpadding="0">
                             <tr>
                                 <td id="td1" onclick="$('#p1').fadeIn('slow');
-                                $('#trian').fadeIn('slow');
-                                $('#ima2').fadeOut('slow');
-                                $('#ima3').fadeOut('slow');" class="sombra" style="border-bottom: 1px solid #FFFFFF; vertical-align: top;width: 200px;">
+                                        $('#trian').fadeIn('slow');
+                                        $('#ima2').fadeOut('slow');
+                                        $('#ima3').fadeOut('slow');" class="sombra" style="border-bottom: 1px solid #FFFFFF; vertical-align: top;width: 200px;">
                                     <div id="ima1" style="display: table-cell;vertical-align: bottom;cursor: pointer;width: 200px; height: 319px; background-image: url('recursos/socias/i-chocano.jpg');">
                                         <div id="i1" style="background:rgba(0,0,0,0.2);width: 200px; height: 65px;">
                                             <label style="color: #FFFFFF;font-size: 18px; font-family: 'Sintony', sans-serif;font-weight: 500;">

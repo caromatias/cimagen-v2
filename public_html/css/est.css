@@ -228,6 +228,7 @@ h1.vertical_css3 {
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 h4.vertical_css3 {
     -webkit-transform: rotate(-90deg);
@@ -235,6 +236,7 @@ h4.vertical_css3 {
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 .menuColor{
     font-family: miFuente;
