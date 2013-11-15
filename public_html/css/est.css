@@ -118,13 +118,13 @@ body{
     vertical-align: bottom;
 }
 .tdmenus{
-     background-color: gray;
-     cursor: pointer;
+    background-color: gray;
+    cursor: pointer;
     /*
      width: 52px;
-     */
-     vertical-align: bottom;
- }
+    */
+    vertical-align: bottom;
+}
 .tdmenus:hover{
     background-color: #00DA9C;
     cursor: pointer;
@@ -140,11 +140,11 @@ body{
     vertical-align: bottom;
 }
 .tdmenup{
-     background-color: gray;
-     cursor: pointer;
-     width: 52px;
-     vertical-align: bottom;
- }
+    background-color: gray;
+    cursor: pointer;
+    width: 52px;
+    vertical-align: bottom;
+}
 .tdmenup:hover{
     background-color: #f78e1e;
     cursor: pointer;
@@ -158,11 +158,11 @@ body{
     vertical-align: bottom;
 }
 .tdmenuc{
-     background-color: gray;
-     cursor: pointer;
-     width: 52px;
-     vertical-align: bottom;
- }
+    background-color: gray;
+    cursor: pointer;
+    width: 52px;
+    vertical-align: bottom;
+}
 .tdmenuc:hover{
     background-color: #78278b;
     cursor: pointer;
@@ -176,11 +176,11 @@ body{
     vertical-align: bottom;
 }
 .tdmenuco{
-         background-color: gray;
-         cursor: pointer;
-         width: 52px;
-         vertical-align: bottom;
-     }
+    background-color: gray;
+    cursor: pointer;
+    width: 52px;
+    vertical-align: bottom;
+}
 .tdmenuco:hover{
     background-color: #00aaa6;
     cursor: pointer;
@@ -528,18 +528,18 @@ h4.vertical_css3 {
     cursor: pointer;
 }
 .mueveTriangulo{
-     -webkit-transition: all 1s ease-in-out;
-     -moz-transition: all 1s ease-in-out;
-     -o-transition: all 1s ease-in-out;
-     -ms-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
     /*
      -webkit-transform: translate(0em,4.6em);
      -moz-transform: translate(0em,4.6em);
      -o-transform: translate(0em,4.6em);
      -ms-transform: translate(0em,4.6em);
-     */
+    */
     margin-top: 84px;
- }
+}
 .mueveTriangulo2{
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -721,5 +721,20 @@ ul.a
     margin-left: -40px;
     list-style-type: disc;
 
+}
+#listaPeriodistas{
+    width: 340px;
+    height: 319px;
+    float: left;
+    margin: 12px 0px 0px 25px;
+}
+#contentImages{
+    width: 295px;
+    height: 319px;
+    float: left;
+    margin: 12px 0px 0px 0px;
+}
+#contentImages img{
+    width: 217px;
 }
 

@@ -14,7 +14,7 @@ if(isset($_POST['Id']) && $_POST['Id'] != 'null' && (int)$_POST['Id'] != 0)
         $estado = $_POST['estado'];
         $correo = $_POST['correo'];
         //obtencion de los datos del archivo
-        $tamñoIm = $_FILES["imagen"]['size'];
+        $tamanoIm = $_FILES["imagen"]['size'];
         $tipoIm = $_FILES["imagen"]['type'];
         $archivoIm = $_FILES["imagen"]['name'];
         $prefijoIm = substr(md5(uniqid(rand())),0,6);
@@ -83,7 +83,7 @@ else
     $estado = $_POST['estado'];
     $correo = $_POST['correo'];
     //obtencion de los datos del archivo
-    $tamñoIm = $_FILES["imagen"]['size'];
+    $tamanoIm = $_FILES["imagen"]['size'];
     $tipoIm = $_FILES["imagen"]['type'];
     $archivoIm = $_FILES["imagen"]['name'];
     $prefijoIm = substr(md5(uniqid(rand())),0,6);
