@@ -193,7 +193,7 @@ if(isset($_GET['m']))
             echo "<script>mensaje('bad', 'No puede auto eliminarse.');</script>";
             break;
         case 'f':
-            echo "<script>mensaje('bad', 'No se ha modificado ningÃºna periodista.');</script>";
+            echo "<script>mensaje('bad', 'No se ha modificado ninguna periodista.');</script>";
             break;
     }
 }
