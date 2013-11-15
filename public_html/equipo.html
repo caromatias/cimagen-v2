@@ -98,6 +98,7 @@
                         document.getElementById('period').style.color = '#FFD4E2';
                         document.getElementById('ejecu').style.fontSize = '14px';
                         document.getElementById('soci').style.fontSize = '12px';
+                        document.getElementById('period').style.fontSize = '12px';
                         ///////////
                         devP2();
                         devP3();
@@ -112,6 +113,7 @@
                         document.getElementById('period').style.color = '#FFD4E2';
                         document.getElementById('soci').style.fontWeight = "700";
                         document.getElementById('ejecu').style.fontSize = '12px';
+                        document.getElementById('period').style.fontSize = '12px';
                         document.getElementById('soci').style.fontSize = '14px';
                         $('#periodistas').fadeOut();
                         $('#ejecvas').fadeOut();
@@ -121,9 +123,10 @@
                         document.getElementById('ejecu').style.color = '#FFD4E2';
                         document.getElementById('soci').style.color = '#FFD4E2';
                         document.getElementById('period').style.color = '#FFFFFF';
-                        document.getElementById('soci').style.fontWeight = "700";
+                        document.getElementById('period').style.fontWeight = '700';
                         document.getElementById('ejecu').style.fontSize = '12px';
-                        document.getElementById('soci').style.fontSize = '14px';
+                        document.getElementById('soci').style.fontSize = '12px';
+                        document.getElementById('period').style.fontSize = '14px';
                         $('#ejecvas').fadeOut();
                         $('#periodistas').fadeIn();
                         //document.getElementById('ejecvas').style.display = 'none';
@@ -132,6 +135,20 @@
                         alert('nada');
                         break;
                 }
+            }
+            function traePeriodistas() {
+                ar array = new Object();
+                array['Tag'] = "traePeriodistas";
+                $.ajax({
+                    type: "POST",
+                    data: array,
+                    url: 'mpanel.php',
+                    success: c.impHistorico,
+                    error: function(e) {
+                        tools.pnotify.bottomright("Error", "Error en el servidor, por favor, intentelo mas tarde.", "error");
+                    }
+                });
+                $(this).unbind("click");
             }
         </script>
     </head>

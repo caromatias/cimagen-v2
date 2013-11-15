@@ -38,6 +38,10 @@ if(!isset($_SESSION['id']))
                         $('#iframe').attr('src', 'gestion/inicio.php');
                         $('#dragdrop').attr('class', 'current');
                         break;
+                    case 'periodistas':
+                        $('#iframe').attr('src', 'periodistas/inicio.php');
+                        $('#dragdrop').attr('class', 'current');
+                        break;
                     case 'ayuda':
                         $('#iframe').attr('src', 'ayuda/inicio.php');
                         $('#dragdrop').attr('class', 'current');
@@ -91,6 +95,11 @@ if(!isset($_SESSION['id']))
                     <tr>
                         <td style="height: 40px;" class="tbLat" onclick="srcIframe('clientes');">
                             Clientes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 40px;" class="tbLat" onclick="srcIframe('periodistas');">
+                            Periodistas
                         </td>
                     </tr>
                     <tr>

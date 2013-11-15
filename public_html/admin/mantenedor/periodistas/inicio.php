@@ -5,7 +5,7 @@ if(!isset($_SESSION['id']))
     header('Location: ../../procesos/logout.php');
 }
 include "../../procesos/conectar.php";
-$query = "select * from cliente;";
+$query = "select * from periodista;";
 $res = mysql_query($query);
 mysql_close($con);
 if(mysql_num_rows($res) > 0)
@@ -14,7 +14,7 @@ if(mysql_num_rows($res) > 0)
     while($reg = mysql_fetch_array($res))
     {
         $style = "";
-        if((int)$reg[4] == 1)
+        if((int)$reg[3] == 1)
         {
             $estado = 'Activo';
         }
@@ -22,14 +22,6 @@ if(mysql_num_rows($res) > 0)
         {
             $estado = 'Inactivo';
             $style = "style='color:red;'";
-        }
-        if($reg[5] == 0)
-        {
-            $tiempo = "Actual";
-        }
-        else
-        {
-            $tiempo = "Antiguo";
         }
         $tEventos.="	<tr ".$style." onclick=\"window.location = 'inicio.php#".$reg[0]."';pasaUsuario();\" onContextMenu=\" menuTrUsuario(".$reg[0].");\";>
 								<td>
@@ -39,10 +31,10 @@ if(mysql_num_rows($res) > 0)
 									".$reg[1]."
 								</td>
 								<td>
-									<img src='".$reg[3]."' style='width: 100px; height: 60px;' />
+									".$reg[2]."
 								</td>
-								<td>
-									".$tiempo."
+                                                                <td>
+									<img src='".$reg[4]."' style='width: 100px; height: 60px;' />
 								</td>
 								<td>
 									<form action='delcliente.php' method='post' id='fdu".$reg[0]."'><input type='hidden' value='".$reg[0]."' name='Id'/></form>
@@ -115,26 +107,19 @@ else
                             {
                                 document.getElementById('runo').checked = true;
                             }
-                            if(arreglo[5] == '0')
-                            {
-                                document.getElementById('tcero').checked = true;
-                            }
-                            else
-                            {
-                                document.getElementById('tuno').checked = true;
-                            }
                             document.getElementById('btNuevo').disabled = false;
                             $("#sNombreUsuario").html(arreglo[1]);
                             $("#hId").val(arreglo[0]);
                             document.getElementById('tbDetalles').childNodes[1].childNodes[2].childNodes[1].innerHTML = arreglo[0];
                             document.getElementById('tbDetalles').childNodes[1].childNodes[4].childNodes[1].innerHTML = "<input type='text' name='nombre' required='true' value='" + arreglo[1] + "'/>";
-                            document.getElementById('tbDetalles').childNodes[1].childNodes[6].childNodes[1].innerHTML = "<img src='"+ arreglo[3] +"' /><br/><input type='file' name='imagen' id='imagen'/>";
+                            document.getElementById('tbDetalles').childNodes[1].childNodes[6].childNodes[1].innerHTML = "<img src='"+ arreglo[2] +"' /><br/><input type='file' name='imagen' id='imagen'/>";
+                            $('#correo').val(arreglo[3]);
                         }
                         $("#tbDetalles").slideDown('fast');
                         ocargando();
                     }
                 }
-                xmlhttp.open("GET",'agetcliente.php?idu=' + usr,true);
+                xmlhttp.open("GET",'agetperiodista.php?idu=' + usr,true);
                 xmlhttp.send();
             }
             else
@@ -145,13 +130,12 @@ else
 
         function nuevoUsuario()
         {
-            $("#sNombreUsuario").html('Nuevo Cliente');
+            $("#sNombreUsuario").html('Nueva Periodista');
             $("#hId").val('');
-            document.getElementById('tbDetalles').childNodes[1].childNodes[2].childNodes[1].innerHTML = 'Nuevo';
+            document.getElementById('tbDetalles').childNodes[1].childNodes[2].childNodes[1].innerHTML = 'Nueva';
             document.getElementById('tbDetalles').childNodes[1].childNodes[4].childNodes[1].innerHTML = "<input type='text' name='nombre' required title='Debe ingresar un nombre' value=''/>";
-            document.getElementById('tbDetalles').childNodes[1].childNodes[6].childNodes[1].innerHTML = "<input type='file' required title='Debe subir una imagen' name='imagen' id='imagen'/> ";
+            document.getElementById('tbDetalles').childNodes[1].childNodes[6].childNodes[1].innerHTML = "<img src='"+ arreglo[3] +"' /><br/><input type='file' name='imagen' id='imagen'/>";
             document.getElementById('runo').checked = true;
-            document.getElementById('tcero').checked = true;
             document.getElementById('btNuevo').disabled = true;
             $("#tbDetalles").slideDown('fast');
         }
@@ -172,7 +156,7 @@ else
 
         function menuDefecto()
         {
-            $("#menu ul").html("<li onclick=\"nuevoUsuario();\">Nuevo Cliente</li>");
+            $("#menu ul").html("<li onclick=\"nuevoUsuario();\">Nueva Periodista</li>");
             $("#menu ul").html($("#menu ul").html() + "<li onclick=\"location.reload();\">Actualizar</li>");
         }
 
@@ -197,7 +181,7 @@ if(isset($_GET['m']))
     switch($_GET['m'])
     {
         case 'iok':
-            echo "<script>mensaje('ok', 'Cliente creado correctamente.');</script>";
+            echo "<script>mensaje('ok', 'Periodista creada correctamente.');</script>";
             break;
         case 'uok':
             echo "<script>mensaje('ok', 'Cliente actualizado correctamente.');</script>";
@@ -209,7 +193,7 @@ if(isset($_GET['m']))
             echo "<script>mensaje('bad', 'No puede auto eliminarse.');</script>";
             break;
         case 'f':
-            echo "<script>mensaje('bad', 'No se ha modificado ningnún cliente.');</script>";
+            echo "<script>mensaje('bad', 'No se ha modificado ningúna periodista.');</script>";
             break;
     }
 }
@@ -229,15 +213,15 @@ if(isset($_GET['m']))
 -->
 <div id="menu">
     <ul>
-        <li onClick="nuevoUsuario();">Nuevo Cliente</li>
+        <li onClick="nuevoUsuario();">Nueva Periodista</li>
         <li onClick="location.reload();">Actualizar</li>
     </ul>
 </div>
 <center>
-    <h1>Administración de Clientes</h1>
+    <h1>Administración de Periodistas</h1>
     <div>
         <center>
-            <form action="mancliente.php" method="post" name="fCreaUser" enctype="multipart/form-data">
+            <form action="manperiodista.php" method="post" name="fCreaUser" enctype="multipart/form-data">
                 <table id='tbDetalles' style="display:none;">
                     <tr>
                         <th colspan="2">
@@ -249,6 +233,14 @@ if(isset($_GET['m']))
                     <tr><td>Imagen</td><td></td></tr>
                     <tr>
                         <td>
+                            Correo
+                        </td>
+                        <td>
+                            <input type='text' name='correo' id="correo" required title='Debe ingresar un correo' value=''/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             Estado
                         </td>
                         <td>
@@ -256,16 +248,6 @@ if(isset($_GET['m']))
                             <input type="radio" id='rcero' name="estado" value="0" /> Inactivo
                             <input type="hidden" id='hId' name='Id' value='null'/>
                             <input type="hidden" name='pass'/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Tiempo
-                        </td>
-                        <td>
-                            <hr>
-                            <input type="radio" id='tcero' name="tiempo" value="0" /> Actual<br />
-                            <input type="radio" id='tuno' name="tiempo" value="1" /> Antiguo
                         </td>
                     </tr>
                     <!--.$_POST['nombre']."', '".$_POST['login']."', '".$_POST['pass']."', ".$_POST['estado'].");";-->
@@ -291,10 +273,10 @@ if(isset($_GET['m']))
                 Nombre
             </th>
             <th>
-                Imagen
+                Correo
             </th>
             <th>
-                Tiempo
+                Imagen
             </th>
             <th>
                 Estado
