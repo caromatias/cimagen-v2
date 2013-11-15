@@ -5,7 +5,7 @@ if(!isset($_SESSION['id']))
     header('Location: ../../procesos/logout.php');
 }
 include "../../procesos/conectar.php";
-$query = "select * from periodista;";
+$query = "select * from asociadas;";
 $res = mysql_query($query);
 mysql_close($con);
 if(mysql_num_rows($res) > 0)
@@ -14,7 +14,7 @@ if(mysql_num_rows($res) > 0)
     while($reg = mysql_fetch_array($res))
     {
         $style = "";
-        if((int)$reg[3] == 1)
+        if((int)$reg[6] == 1)
         {
             $estado = 'Activo';
         }
@@ -33,8 +33,14 @@ if(mysql_num_rows($res) > 0)
 								<td>
 									".$reg[2]."
 								</td>
+								<td>
+									".$reg[3]."
+								</td>
+								<td>
+									".$reg[4]."
+								</td>
                                                                 <td>
-									<img src='".$reg[4]."' style='width: 100px; height: 60px;' />
+									<img src='".$reg[5]."' style='width: 100px; height: 60px;' />
 								</td>
 								<td>
 									<form action='delcliente.php' method='post' id='fdu".$reg[0]."'><input type='hidden' value='".$reg[0]."' name='Id'/></form>
@@ -99,7 +105,7 @@ else
                         else
                         {
                             var arreglo = xmlhttp.responseText.split(';');
-                            if(arreglo[4] == '0')
+                            if(arreglo[7] == '0')
                             {
                                 document.getElementById('rcero').checked = true;
                             }
@@ -112,14 +118,16 @@ else
                             $("#hId").val(arreglo[0]);
                             document.getElementById('tbDetalles').childNodes[1].childNodes[2].childNodes[1].innerHTML = arreglo[0];
                             document.getElementById('tbDetalles').childNodes[1].childNodes[4].childNodes[1].innerHTML = "<input type='text' name='nombre' required='true' value='" + arreglo[1] + "'/>";
-                            document.getElementById('tbDetalles').childNodes[1].childNodes[6].childNodes[1].innerHTML = "<img src='"+ arreglo[2] +"' /><br/><input type='file' name='imagen' id='imagen'/>";
+                            document.getElementById('tbDetalles').childNodes[1].childNodes[6].childNodes[1].innerHTML = "<img src='"+ arreglo[5] +"' /><br/><input type='file' name='imagen' id='imagen'/>";
                             $('#correo').val(arreglo[3]);
+                            $('#biografia').val(arreglo[4]);
+                            $('#cargo').val(arreglo[2]);
                         }
                         $("#tbDetalles").slideDown('fast');
                         ocargando();
                     }
                 }
-                xmlhttp.open("GET",'agetperiodista.php?idu=' + usr,true);
+                xmlhttp.open("GET",'agetasociadas.php?idu=' + usr,true);
                 xmlhttp.send();
             }
             else
@@ -130,7 +138,7 @@ else
 
         function nuevoUsuario()
         {
-            $("#sNombreUsuario").html('Nueva Periodista');
+            $("#sNombreUsuario").html('Nueva Asociada');
             $("#hId").val('');
             document.getElementById('tbDetalles').childNodes[1].childNodes[2].childNodes[1].innerHTML = 'Nueva';
             document.getElementById('tbDetalles').childNodes[1].childNodes[4].childNodes[1].innerHTML = "<input type='text' name='nombre' required title='Debe ingresar un nombre' value=''/>";
@@ -148,7 +156,7 @@ else
 
         function eliminarUser(id)
         {
-            if(confirm('¿Realmente desea eliminar a la asociada ' + id + '?') == true)
+            if(confirm('¿Realmente desea eliminar al cliente ' + id + '?') == true)
             {
                 document.getElementById('fdu' + id).submit();
             }
@@ -156,7 +164,7 @@ else
 
         function menuDefecto()
         {
-            $("#menu ul").html("<li onclick=\"nuevoUsuario();\">Nueva Periodista</li>");
+            $("#menu ul").html("<li onclick=\"nuevoUsuario();\">Nueva Asociada</li>");
             $("#menu ul").html($("#menu ul").html() + "<li onclick=\"location.reload();\">Actualizar</li>");
         }
 
@@ -184,7 +192,7 @@ if(isset($_GET['m']))
             echo "<script>mensaje('ok', 'Periodista creada correctamente.');</script>";
             break;
         case 'uok':
-            echo "<script>mensaje('ok', 'Asociada actualizada correctamente.');</script>";
+            echo "<script>mensaje('ok', 'Cliente actualizado correctamente.');</script>";
             break;
         case 'dok':
             echo "<script>mensaje('ok', 'UsuarClienteio eliminado correctamente.');</script>";
@@ -213,15 +221,15 @@ if(isset($_GET['m']))
 -->
 <div id="menu">
     <ul>
-        <li onClick="nuevoUsuario();">Nueva Periodista</li>
+        <li onClick="nuevoUsuario();">Nueva Asociada</li>
         <li onClick="location.reload();">Actualizar</li>
     </ul>
 </div>
 <center>
-    <h1>AdministraciÃ³n de Periodistas</h1>
+    <h1>Administración de Asociadas</h1>
     <div>
         <center>
-            <form action="manperiodista.php" method="post" name="fCreaUser" enctype="multipart/form-data">
+            <form action="manasociada.php" method="post" name="fCreaUser" enctype="multipart/form-data">
                 <table id='tbDetalles' style="display:none;">
                     <tr>
                         <th colspan="2">
@@ -237,6 +245,22 @@ if(isset($_GET['m']))
                         </td>
                         <td>
                             <input type='text' name='correo' id="correo" required title='Debe ingresar un correo' value=''/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Biografia
+                        </td>
+                        <td>
+                            <input type='text' name="biografia" id="biografia" required title='Debe ingresar una biografia' value=''/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cargo
+                        </td>
+                        <td>
+                            <input type='text' name="cargo" id="cargo" required title='Debe ingresar un cargo' value=''/>
                         </td>
                     </tr>
                     <tr>
@@ -273,7 +297,13 @@ if(isset($_GET['m']))
                 Nombre
             </th>
             <th>
+                Cargo
+            </th>
+            <th>
                 Correo
+            </th>
+            <th>
+                Biografia
             </th>
             <th>
                 Imagen
