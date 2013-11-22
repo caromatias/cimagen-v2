@@ -28,7 +28,7 @@
         }
     </script>
 </head>
-<body onload="menu();" oncontextmenu="return false;">
+<body onload="menu();">
 <div id="contenedorPrimario" style="position: relative;">
     <div id="foto" style="position: absolute; background: rgba(0, 0, 0, 0.5); width: 450px; height: 535px; left: 550px;top: 145px;z-index: 1;display: none;">
         <center>
@@ -46,10 +46,10 @@
             </table>
         </center>
     </div>
-    <img src="../recursos/14ans.jpg" style="position: absolute;margin: 10px 0px 0px 40px;">
     <div id="titulo" style="position: relative;">
         <br/>
-        <img src="../recursos/logos/5.jpg" style="padding-top: 6px;">
+
+        <img src="../recursos/logos/5.jpg" style="padding-left: 14px;padding-top: 1px;">
     </div>
 
     <table cellspacing="0" cellpadding="0">

@@ -7,7 +7,7 @@ if(!isset($_SESSION['nombre']))
 if(!isset($_GET['idu']) || (int)$_GET['idu'] != 0)
 {
     include "../../procesos/conectar.php";
-    $query = "select id, nombre, cargo , correo, biografia, imagen, estado from asociadas where id = ".$_GET['idu'].";";
+    $query = "select id, nombre, imagen , correo, estado from periodista where id = ".$_GET['idu'].";";
     $res = mysql_query($query);
     mysql_close($con);
     if(mysql_num_rows($res) == 1)

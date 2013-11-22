@@ -88,13 +88,13 @@ body{
     vertical-align: bottom;
 }
 .tdmenu:hover{
-    background-color: #1e90ff;
+    background-color: #3B4D96;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
 }
 .tdmenuact{
-    background-color: #1e90ff;
+    background-color: #3B4D96;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
@@ -106,13 +106,13 @@ body{
     vertical-align: bottom;
 }
 .tdmenue:hover{
-    background-color: #EC008C;
+    background-color: #F173AC;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
 }
 .tdmenueact{
-    background-color: #EC008C;
+    background-color: #F173AC;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
@@ -126,7 +126,7 @@ body{
     vertical-align: bottom;
 }
 .tdmenus:hover{
-    background-color: #00DA9C;
+    background-color: #C1D82F;
     cursor: pointer;
     /*
     width: 52px;
@@ -134,7 +134,7 @@ body{
     vertical-align: bottom;
 }
 .tdmenusact{
-    background-color: #00DA9C;
+    background-color: #C1D82F;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
@@ -146,13 +146,13 @@ body{
     vertical-align: bottom;
 }
 .tdmenup:hover{
-    background-color: #f78e1e;
+    background-color: #F78E1E;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
 }
 .tdmenupact{
-    background-color: #f78e1e;
+    background-color: #F78E1E;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
@@ -164,13 +164,13 @@ body{
     vertical-align: bottom;
 }
 .tdmenuc:hover{
-    background-color: #78278b;
+    background-color: #BB62CB;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
 }
 .tdmenucact{
-    background-color: #78278b;
+    background-color: #BB62CB;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
@@ -182,13 +182,13 @@ body{
     vertical-align: bottom;
 }
 .tdmenuco:hover{
-    background-color: #00aaa6;
+    background-color: #7ADED4;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
 }
 .tdmenucoact{
-    background-color: #00aaa6;
+    background-color: #7ADED4;
     cursor: pointer;
     width: 52px;
     vertical-align: bottom;
@@ -506,7 +506,7 @@ h4.vertical_css3 {
     width: 0;
     height: 0;
     border-top: 12px solid transparent;
-    border-left: 15px solid #00DA9C;
+    border-left: 15px solid #C1D82F;
     border-bottom: 12px solid transparent;
 }
 .triangulo_izq {
@@ -726,7 +726,7 @@ ul.a
     width: 340px;
     height: 319px;
     float: left;
-    margin: 12px 0px 0px 25px;
+    margin: 12px 0px 0px 0px;
 }
 #contentImages{
     width: 295px;

@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
-        <meta charset="UTF-8">
+        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+
         <link rel="stylesheet" type="text/css" href="css/est.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/global.js"></script>
         <script type="text/javascript" src="js/jquery-latest.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <script type="text/javascript">
-            function menu()
+            function ini()
             {
-                document.getElementById('contacto').className = "tdmenucoact";
+                if (window.location.hash != '')
+                {
+                    var usr = window.location.hash.substring(1);
+                    if (usr == "qs")
+                    {
+                        $('#quienes').fadeIn('slow');
+                    }
+                }
             }
-            function muestra(id)
+            function salida()
             {
-                document.getElementById(id).style.display = "block";
-            }
-            function nom(id)
-            {
-                document.getElementById(id).style.display = "none";
-            }
-            function ima(ruta)
-            {
-                document.getElementById('fotoGrande').src = ruta;
-                $('#foto').fadeIn('slow');
+                $('#menuVerti').fadeIn('slow');
+                if (window.location.hash != '')
+                {
+                    //document.getElementById('cargando').style.display = "none";
+                    ini();
+                    document.getElementById('quienesSomos').className = 'tdmenuact';
+                }
             }
         </script>
         <script type="text/javascript">
             $(document).ready(function() {
-
+                /*
                 var tiempo_inicio_anim = 200;
                 var tiempo_entre_img = 5000;
                 var tiempo_fade = 1000;
@@ -69,7 +72,7 @@
                 setTimeout(function() {
                     animacion_simple();
                 }, tiempo_inicio_anim);
-
+                */
             });
         </script>
         <style type="text/css">
@@ -92,7 +95,7 @@
 
             .animacion_img {
                 float:left;
-                width:410px;
+                width:730px;
                 height:320px;
                 padding:0px;
                 margin:0px;
@@ -105,97 +108,126 @@
                 position:absolute;
                 left:0px;
                 top:0px;
-                display:none;
             }
 
         </style>
     </head>
-    <body onload="menu();" oncontextmenu="return false;">
+    <body onload="salida();">
         <div id="contenedorPrimario" style="position: relative;">
-            <div id="foto" style="position: absolute; background: rgba(0, 0, 0, 0.5); width: 450px; height: 535px; left: 550px;top: 145px;z-index: 1;display: none;">
+            <div id='cargando' onContextMenu="return false;" style="position: absolute; top: 130px; display: none;">
                 <center>
-                    <div style="float: right; width: 22px">
-                        <label style="font-family: nunito, san-serif; font-size: 20px; color: #FFFFFF; cursor: pointer;" onclick="$('#foto').fadeOut('slow');">
-                            x
-                        </label>
-                    </div>
-                    <table cellspacing="10" cellpadding="20">
-                        <tr>
-                            <td>
-                                <img style="border: 3px solid #FFFFFF;" id="fotoGrande" src="../recursos/eventos/8abcee_relajacionazul.jpg" width="360" height="460"/>
-                            </td>
-                        </tr>
-                    </table>
+                    <img src="recursos/img/01a.jpg" title="Slide1" style="width: 1000px; height: 410px;">
                 </center>
             </div>
-            <img src="recursos/14ans.jpg" style="position: absolute;margin: 10px 0px 0px 40px;">
+            <div id="quienes" style="position: absolute; top: 132px; float: right;z-index: 9999;left: 525px; display: none;">
+                <div style="margin: 0 auto;background-color: #ffffff; width: 500px; height: 405px; text-align: center;">
+                    <div style="width: 450px; margin: 0 auto; ">
+                        <div style="float: right;">
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px; cursor: pointer;" onclick="$('#quienes').fadeOut('slow');
+                            document.getElementById('quienesSomos').className = 'tdmenu';">
+                                <br/>Cerrar<span>Cerrar</span>
+                            </label>
+                        </div>
+                        <br/><br/><br/>
+                        <table>
+                            <tr>
+                                <td align="left" style="text-align: left;width: 407px;">
+                                    <label style="font-family: 'Sintony', sans-serif; font-size: 12px; line-height: 20px;">
+                                        Somos  una empresa de Comunicación Corporativa creada en el año 2000.<br/><br/>
+                                        Nos hemos especializado en posicionar marcas nacionales y extranjeras y a líderes de opinión.<br/><br/>
+                                        Desarrollamos e implementamos estrategias de comunicación internas y externas a la medida de cada cliente.<br/><br/>
+                                        Contamos con una amplia experiencia en manejo de crisis y oportuna capacidad de respuesta.<br/><br/>
+                                        Nos diferenciamos por entregar una asesoría personalizada y flexible.<br/><br/>
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
             <div id="titulo" style="position: relative;">
                 <br/>
-                <img src="recursos/logos/6.jpg" style="padding-top: 12px;">
+
+                <img src="recursos/logos/1.png" style="padding-top: 10px;">
             </div>
-            <table border="0px" style="position: absolute;left: -5px;width: 100%; height: 400px;top: 158px; border-collapse: separate;
+
+            <table id="menuVerti" border="0px" style="display: none;position: absolute;left: -5px;width: 100%; height: 400px;top: 158px; border-collapse: separate;
                    border-spacing: 5px;
                    border-collapse: expression('separate', cellSpacing = '5px');">
                 <tr>
-                    <td id="quienesSomos" class="tdmenu" valign="bottom" style="width: 42px;height: 320px;" onclick="window.location.href = 'home.html#qs';">
+                    <td id="quienesSomos" class="tdmenu" valign="bottom" style="width: 42px;" onclick="$('#quienes').fadeIn('slow');
+                    document.getElementById('quienesSomos').className = 'tdmenuact';">
                         <div style="position: relative; width: 42px;">
                             <div style="position: absolute; top: -80px; left: 7px;">
                                 <h4 class="vertical_css3 menuColor">QUIENES&nbsp;SOMOS</h4>
                             </div>
                         </div>
                     </td>
-                    <td class="tdmenue" style="width: 42px;height: 320px;" onclick="window.location.href = 'equipo.html';">
+                    <td class="tdmenue" style="width: 42px;" onclick="window.location.href = 'equipo.html';">
                         <div style="position: relative; width: 42px;">
                             <div style="position: absolute; top: -80px; left: 7px;">
                                 <h4 class="vertical_css3 menuColor">EQUIPO</h4>
                             </div>
                         </div>
                     </td>
-                    <td id="servicios" class="tdmenus" style="width: 42px;height: 320px;" onclick="window.location.href = 'servicios.html';">
-                        <div style="position: relative; width: 40px;">
+                    <td id="servicios" class="tdmenus" style="width: 42px;" onclick="window.location.href = 'servicios.html';">
+                        <div style="position: relative; width: 42px;">
                             <div style="position: absolute; top: -80px; left: 7px;">
                                 <h4 class="vertical_css3 menuColor">SERVICIOS</h4>
                             </div>
                         </div>
                     </td>
-                    <td id="portafolio" class="tdmenup" style="width: 42px;height: 320px;" onclick="window.location.href = 'portafolio/';">
+                    <td class="tdmenup" style="width: 42px;" onclick="window.location.href = 'portafolio/';">
                         <div style="position: relative; width: 42px;">
                             <div style="position: absolute; top: -80px; left: 7px;">
                                 <h4 class="vertical_css3 menuColor">PORTAFOLIO</h4>
                             </div>
                         </div>
                     </td>
-                    <td id="clientes" class="tdmenuc" style="width: 42px;height: 320px;" onclick="window.location.href = 'clientes/';">
+                    <td class="tdmenuc" style="width: 42px;" onclick="window.location.href = 'clientes/';">
                         <div style="position: relative; width: 42px;">
                             <div style="position: absolute; top: -80px; left: 7px;">
                                 <h4 class="vertical_css3 menuColor">CLIENTES</h4>
                             </div>
                         </div>
                     </td>
-                    <td id="contacto" class="tdmenucoact" style="width: 42px;height: 320px;" onclick="window.location.reload();">
+                    <td class="tdmenuco" style="width: 42px;" onclick="window.location.href = 'contacto.html';">
                         <div style="position: relative; width: 42px;">
                             <div style="position: absolute; top: -80px; left: 7px;">
                                 <h4 class="vertical_css3 menuColor">CONTACTO</h4>
                             </div>
                         </div>
                     </td>
-                    <td style="width: 410px; height: 320px;">
-                        
-                        <div id="mapa" style="width: 410px; height: 320px;"></div>  
-                        
-                    </td>
                     <td>
-                        <label style="font-family: 'Sintony', sans-serif;color: #333333;line-height: 25px;font-size: 13px;">DON CARLOS 3171, Of B<br>
-                            LAS CONDES, STGO <br>
-                            TEL: (56 2) 2249 76 55 - (56 2) 2245 10 83<br>
-                            MAIL:  <a style="text-decoration: none;color: #333333;" href="mailto:cimagen@cimagen.cl">cimagen@cimagen.cl</a>
-                        </label>
+                        <!--
+                        <div class="slides">
+                            <ul>
+                                <li><img src="recursos/img/15-c.jpg" title="Slide1" style="width: 730px; height: 390px;">
+        
+                                </li>
+                                <li><img src="recursos/img/241.jpg" title="Slide2" style="width: 730px;height: 390px;">
+        
+                                </li>
+                                <li><img src="recursos/img/IMG_5272.JPG" title="Slide3" style="width: 730px;height: 390px;">
+        
+                                </li>
+                                <li><img src="recursos/slide4.jpg" title="Slide3" style="width: 730px;height: 390px;">
+        
+                                </li>
+                            </ul>
+                        </div>
+                        -->
+                        <div class="animacion">
+                            <div class="animacion_img">
+                                <img src="recursos/logo-imagen-color.png" style="width: 730px;height: 320px;"/>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="8" style="height: 184px; vertical-align: bottom;text-align: center;">
+                    <td colspan="7" style="height: 184px; vertical-align: bottom;text-align: center;">
                         <label style="font-size: 13px;font-family: miFuente;position: absolute;left: 283px;">DON CARLOS 3171, OF B / LAS CONDES, STGO / TEL: (56 2) 2249 76 55 - (56 2) 2245 10 83</label>
-                        <div style="float: right; margin-right: 9px;">
+                        <div style="float: right; margin-right: 20px;">
                             <img src="recursos/img/f_logo.png" title="Facebook" style="width: 28px; height: 28px;">
                             <img src="recursos/img/twitter.png" title="Twitter" style="width: 28px; height: 28px;">
                         </div>
@@ -203,53 +235,5 @@
                 </tr>
             </table>
         </div>
-        <script type="text/javascript">
-            window.onload = function() {
-                var styles = [
-                    {
-                        featureType: 'poi',
-                        elementType: 'geometry',
-                        stylers: [
-                            {hue: '#E7E7E7'},
-                            {lightness: 30}
-                        ]
-                    }, {
-                        featureType: 'road',
-                        elementType: 'geometry',
-                        stylers: [
-                            {hue: '#d5c18c'},
-                            {lightness: 14}
-                        ]
-                    }, {
-                        featureType: 'landscape',
-                        elementType: 'all',
-                        stylers: [
-                            {hue: '#E7E7E7'},
-                            {saturation: 100},
-                            {lightness: 78}
-                        ]
-                    }
-                ];
-                var options = {
-                    mapTypeControlOptions: {
-                        mapTypeIds: ['Styled']
-                    },
-                    center: new google.maps.LatLng(-33.4150016,-70.5975647),
-                    zoom: 16,
-                    disableDefaultUI: true,
-                    mapTypeId: 'Styled'
-                };
-                var div = document.getElementById('mapa');
-                var map = new google.maps.Map(div, options);
-                var styledMapType = new google.maps.StyledMapType(styles, {name: 'Styled'});
-                map.mapTypes.set('Styled', styledMapType);
-                var myLatlng = new google.maps.LatLng(-33.4150016,-70.5975647);
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    title: "Cimagen"
-                });
-                marker.setMap(map);
-            };
-        </script>
     </body>
 </html>
