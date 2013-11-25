@@ -1,4 +1,4 @@
 <?php
-$con = mysql_connect("localhost","pisodigi_caromat","caromatias");
-mysql_select_db("pisodigi_adcimag", $con);
+$con = mysql_connect("localhost","root","caromatias");
+mysql_select_db("adcimag", $con);
 ?>

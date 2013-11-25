@@ -28,7 +28,7 @@
         }
     </script>
 </head>
-<body onload="menu();" oncontextmenu="return false;">
+<body onload="menu();" oncontextmenu="return true;">
 <div id="contenedorPrimario" style="position: relative;">
     <div id="foto" style="position: absolute; background: rgba(0, 0, 0, 0.5); width: 450px; height: 535px; left: 550px;top: 145px;z-index: 1;display: none;">
         <center>

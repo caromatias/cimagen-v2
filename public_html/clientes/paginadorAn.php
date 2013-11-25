@@ -70,13 +70,14 @@ if($Res>0) $PagUlt=floor($PagUlt)+1;
 //echo "<a onclick=\"Pagina('1')\">Primero</a> ";
 //echo "<center><a href=\"javascript: Pagina('1')\">Primero</a>";
 
-
+echo "<table style='margin: 10px 0px 0px 530px;'><tr>";
 //echo "<center><button class='button' value='Primera' onclick=\"Pagina('1')\">Primera</button>";
-if($PagAct>1) echo "<table><tr><td style='height: 12px;'></td></tr><tr><td style='width: 510px;'></td><td class='triangulo_izq_cli' onclick='PaginaAn(".$PagAnt.")'></td></tr></table>";
+if($PagAct>1) echo "<td><div class='triangulo_izq_cli' onclick='PaginaAn(".$PagAnt.")'></div></td>";
 //echo "<a href=\"javascript: Pagina('$PagAnt')\">Anterior</a> ";
 //echo "<strong> Pagina ".$PagAct." de ".$PagUlt."</strong>";
-if($PagAct<$PagUlt)  echo "<table><tr><td style='height: 12px;'></td></tr><tr><td style='width: 510px;'></td><td class='triangulo_der_cli' onclick='PaginaAn(".$PagSig.")'></td></tr></table>";
+if($PagAct<$PagUlt)  echo "<td><div class='triangulo_der_cli' onclick='PaginaAn(".$PagSig.")'></div></td>";
 //echo " <a href=\"javascript: Pagina('$PagSig')\">Siguiente</a> ";
 //echo "<a href=\"javascript: Pagina('$PagUlt')\">Ultimo</a></center>";
 //echo "<button class='button' value='Ultima' onclick='Pagina(".$PagUlt.")'>Ultima</button></center>";
+echo "</tr></table>";
 ?>

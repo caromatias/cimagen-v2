@@ -1,670 +1,673 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/est.css">
-    <script type="text/javascript" src="js/global.js"></script>
-    <script type="text/javascript" src="js/jquery-latest.js"></script>
-    <script type="text/javascript">
-        function menu()
-        {
-            document.getElementById('servicios').className = "tdmenusact";
-        }
-        function trian(pos)
-        {
-            switch (pos)
-            {
-                case 1:
-                    document.getElementById('estrategicos').className = "triangulo_der moverTriangulo";
-                    document.getElementById('lblestrategicos').style.fontWeight = "bold";
-                    document.getElementById('gestiondecrisis').style.fontWeight = "normal";
-                    document.getElementById('gestiondeprensa').style.fontWeight = "normal";
-                    document.getElementById('monitoreo').style.fontWeight = "normal";
-                    document.getElementById('publicaciones').style.fontWeight = "normal";
-                    document.getElementById('institucionales').style.fontWeight = "normal";
-                    document.getElementById('eventos').style.fontWeight = "normal";
-                    document.getElementById('pesUno').style.display = "block";
-                    document.getElementById('pesDos').style.display = "none";
-                    document.getElementById('lblComInternas').style.fontWeight = "normal";
-                    $('#pesTextCuatro').fadeOut('fast');
-                    $('#pesTres').fadeOut('fast');
-                    $('#pesTextDos').fadeOut('fast');
-                    $('#pesTextTres').fadeOut('fast');
-                    $('#pesTextCinco').fadeOut('fast');
-                    $('#pesTextSeis').fadeOut('fast');
-                    $('#pesTextSiete').fadeOut('fast');
-                    setTimeout("$('#pesTextUno').fadeIn('slow')",500);
-                    setTimeout("$('#pesUno').fadeIn('slow')", 500);
-                    //setTimeout("$('#pesDos').fadeIn('fast')", 500);
-                    break;
-                case 2:
-                    document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo";
-                    document.getElementById('lblestrategicos').style.fontWeight = "normal";
-                    document.getElementById('gestiondecrisis').style.fontWeight = "bold";
-                    document.getElementById('gestiondeprensa').style.fontWeight = "normal";
-                    document.getElementById('monitoreo').style.fontWeight = "normal";
-                    document.getElementById('publicaciones').style.fontWeight = "normal";
-                    document.getElementById('institucionales').style.fontWeight = "normal";
-                    document.getElementById('eventos').style.fontWeight = "normal";
-                    document.getElementById('lblComInternas').style.fontWeight = "normal";
-                    $('#pesTextCuatro').fadeOut('fast');
-                    $('#pesUno').fadeOut('fast');
-                    $('#pesTres').fadeOut('fast');
-                    $('#pesTextUno').fadeOut('fast');
-                    $('#pesTextTres').fadeOut('fast');
-                    $('#pesTextCinco').fadeOut('fast');
-                    $('#pesTextSeis').fadeOut('fast');
-                    $('#pesTextSiete').fadeOut('fast');
-                    setTimeout("$('#pesTextDos').fadeIn('slow')",500);
-                    setTimeout("$('#pesDos').fadeIn('fast')", 500);
-                    //document.getElementById('crea').className = "cambact";
-                    break;
-                case 3:
-                    document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo2";
-                    document.getElementById('lblestrategicos').style.fontWeight = "normal";
-                    document.getElementById('gestiondecrisis').style.fontWeight = "normal";
-                    document.getElementById('gestiondeprensa').style.fontWeight = "bold";
-                    document.getElementById('monitoreo').style.fontWeight = "normal";
-                    document.getElementById('publicaciones').style.fontWeight = "normal";
-                    document.getElementById('institucionales').style.fontWeight = "normal";
-                    document.getElementById('eventos').style.fontWeight = "normal";
-                    document.getElementById('lblComInternas').style.fontWeight = "normal";
-                    $('#pesTextCuatro').fadeOut('fast');
-                    $('#pesUno').fadeOut('fast');
-                    $('#pesDos').fadeOut('fast');
-                    $('#pesTextUno').fadeOut('fast');
-                    $('#pesTextDos').fadeOut('fast');
-                    $('#pesTextCinco').fadeOut('fast');
-                    $('#pesTextSeis').fadeOut('fast');
-                    $('#pesTextSiete').fadeOut('fast');
-                    setTimeout("$('#pesTextTres').fadeIn('slow')",500);
-                    setTimeout("$('#pesTres').fadeIn('fast')", 500);
-                    //setTimeout("$('#Seis').fadeIn('slow')",500);
-                    break;
-                case 4:
-                    document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo3";
-                    document.getElementById('lblestrategicos').style.fontWeight = "normal";
-                    document.getElementById('gestiondecrisis').style.fontWeight = "normal";
-                    document.getElementById('gestiondeprensa').style.fontWeight = "normal";
-                    document.getElementById('monitoreo').style.fontWeight = "bold";
-                    document.getElementById('publicaciones').style.fontWeight = "normal";
-                    document.getElementById('institucionales').style.fontWeight = "normal";
-                    document.getElementById('eventos').style.fontWeight = "normal";
-                    document.getElementById('lblComInternas').style.fontWeight = "normal";
-                    $('#pesUno').fadeOut('fast');
-                    $('#pesDos').fadeOut('fast');
-                    $('#pesTres').fadeOut('fast');
-                    $('#pesTextUno').fadeOut('fast');
-                    $('#pesTextDos').fadeOut('fast');
-                    $('#pesTextTres').fadeOut('fast');
-                    $('#pesTextCinco').fadeOut('fast');
-                    $('#pesTextSeis').fadeOut('fast');
-                    $('#pesTextSiete').fadeOut('fast');
-                    setTimeout("$('#pesTextCuatro').fadeIn('fast')", 500);
-                    break;
-                case 5:
-                    document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo4";
-                    document.getElementById('lblestrategicos').style.fontWeight = "normal";
-                    document.getElementById('gestiondecrisis').style.fontWeight = "normal";
-                    document.getElementById('gestiondeprensa').style.fontWeight = "normal";
-                    document.getElementById('monitoreo').style.fontWeight = "normal";
-                    document.getElementById('publicaciones').style.fontWeight = "bold";
-                    document.getElementById('institucionales').style.fontWeight = "bold";
-                    document.getElementById('eventos').style.fontWeight = "normal";
-                    document.getElementById('lblComInternas').style.fontWeight = "normal";
-                    $('#pesTextCuatro').fadeOut('fast');
-                    $('#pesUno').fadeOut('fast');
-                    $('#pesDos').fadeOut('fast');
-                    $('#pesTres').fadeOut('fast');
-                    $('#pesTextUno').fadeOut('fast');
-                    $('#pesTextDos').fadeOut('fast');
-                    $('#pesTextTres').fadeOut('fast');
-                    $('#pesTextSeis').fadeOut('fast');
-                    $('#pesTextSiete').fadeOut('fast');
-                    setTimeout("$('#pesTextCinco').fadeIn('slow')", 500);
-                    break;
-                case 7:
-                    document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo6";
-                    document.getElementById('lblestrategicos').style.fontWeight = "normal";
-                    document.getElementById('gestiondecrisis').style.fontWeight = "normal";
-                    document.getElementById('gestiondeprensa').style.fontWeight = "normal";
-                    document.getElementById('monitoreo').style.fontWeight = "normal";
-                    document.getElementById('publicaciones').style.fontWeight = "normal";
-                    document.getElementById('institucionales').style.fontWeight = "normal";
-                    document.getElementById('eventos').style.fontWeight = "bold";
-                    document.getElementById('lblComInternas').style.fontWeight = "normal";
-                    $('#pesTextCuatro').fadeOut('fast');
-                    $('#pesUno').fadeOut('fast');
-                    $('#pesDos').fadeOut('fast');
-                    $('#pesTres').fadeOut('fast');
-                    $('#pesTextUno').fadeOut('fast');
-                    $('#pesTextDos').fadeOut('fast');
-                    $('#pesTextTres').fadeOut('fast');
-                    $('#pesTextCinco').fadeOut('fast');
-                    $('#pesTextSiete').fadeOut('fast');
-                    setTimeout("$('#pesTextSeis').fadeIn('slow')", 500);
-                    break;
-                case 8:
-                    document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo7";
-                    document.getElementById('lblestrategicos').style.fontWeight = "normal";
-                    document.getElementById('gestiondecrisis').style.fontWeight = "normal";
-                    document.getElementById('gestiondeprensa').style.fontWeight = "normal";
-                    document.getElementById('monitoreo').style.fontWeight = "normal";
-                    document.getElementById('publicaciones').style.fontWeight = "normal";
-                    document.getElementById('institucionales').style.fontWeight = "normal";
-                    document.getElementById('eventos').style.fontWeight = "normal";
-                    document.getElementById('lblComInternas').style.fontWeight = "bold";
-                    $('#pesTextCuatro').fadeOut('fast');
-                    $('#pesUno').fadeOut('fast');
-                    $('#pesDos').fadeOut('fast');
-                    $('#pesTres').fadeOut('fast');
-                    $('#pesTextUno').fadeOut('fast');
-                    $('#pesTextDos').fadeOut('fast');
-                    $('#pesTextTres').fadeOut('fast');
-                    $('#pesTextCinco').fadeOut('fast');
-                    $('#pesTextSeis').fadeOut('fast');
-                    setTimeout("$('#pesTextSiete').fadeIn('slow')", 500);
-                    break;
-            }
-        }
-        function primar()
-        {
-            $('#Uno').fadeIn('slow');
-            document.getElementById('diag').className = "cambact";
-            document.getElementById('crea').className = "cambact";
-            document.getElementById('rece').className = "cambact";
-        }
-        function desc(num)
-        {
-            switch(num)
-            {
-                case 1:
-                    $('#Dos').fadeOut('slow');
-                    $('#Tres').fadeOut('slow');
-                    $('#Siete').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    document.getElementById('diag').className = "cambact";
-                    document.getElementById('dise').className = "camb";
-                    document.getElementById('imple').className = "camb";
-                    setTimeout("$('#Uno').fadeIn('slow')",500);
-                    break;
-                case 2:
-                    $('#Uno').fadeOut('slow');
-                    $('#Tres').fadeOut('slow');
-                    $('#Siete').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    document.getElementById('diag').className = "camb";
-                    document.getElementById('dise').className = "cambact";
-                    document.getElementById('imple').className = "camb";
-                    setTimeout("$('#Dos').fadeIn('slow')",500);
-                    break;
-                case 3:
-                    $('#Dos').fadeOut('slow');
-                    $('#Uno').fadeOut('slow');
-                    $('#Siete').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    document.getElementById('diag').className = "camb";
-                    document.getElementById('dise').className = "camb";
-                    document.getElementById('imple').className = "cambact";
-                    setTimeout("$('#Tres').fadeIn('slow')",500);
-                    break;
-                case 4:
-                    $('#Siete').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    $('#Cinco').fadeOut('slow');
-                    document.getElementById('implemen').className = "camb";
-                    document.getElementById('crea').className = "cambact";
-                    setTimeout("$('#Cuatro').fadeIn('slow')",500);
-                    break;
-                case 5:
-                    $('#Siete').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    $('#Cuatro').fadeOut('slow');
-                    document.getElementById('crea').className = "camb";
-                    document.getElementById('implemen').className = "cambact";
-                    setTimeout("$('#Cinco').fadeIn('slow')",500);
-                    break;
-                case 6:
-                    $('#Siete').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    document.getElementById('rece').className = "cambact";
-                    document.getElementById('difu').className = "camb";
-                    document.getElementById('moni').className = "camb";
-                    document.getElementById('entre').className = "camb";
-                    setTimeout("$('#Seis').fadeIn('slow')",500);
-                    break;
-                case 7:
-                    $('#Seis').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    document.getElementById('rece').className = "camb";
-                    document.getElementById('difu').className = "cambact";
-                    document.getElementById('moni').className = "camb";
-                    document.getElementById('entre').className = "camb";
-                    setTimeout("$('#Siete').fadeIn('slow')",500);
-                    break;
-                case 8:
-                    $('#Siete').fadeOut('slow');
-                    $('#Seis').fadeOut('slow');
-                    $('#Nueve').fadeOut('slow');
-                    document.getElementById('rece').className = "camb";
-                    document.getElementById('difu').className = "camb";
-                    document.getElementById('moni').className = "cambact";
-                    document.getElementById('entre').className = "camb";
-                    setTimeout("$('#Ocho').fadeIn('slow')",500);
-                    break;
-                case 9:
-                    $('#Siete').fadeOut('slow');
-                    $('#Ocho').fadeOut('slow');
-                    $('#Seis').fadeOut('slow');
-                    document.getElementById('rece').className = "camb";
-                    document.getElementById('difu').className = "camb";
-                    document.getElementById('moni').className = "camb";
-                    document.getElementById('entre').className = "cambact";
-                    setTimeout("$('#Nueve').fadeIn('slow')",500);
-                    break;
-            }
-        }
-    </script>
-</head>
-<body onload="menu(); primar();" oncontextmenu="return false;">
-<div id="contenedorPrimario" style="position: relative;">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
 
-    <div id="quienes"  style="position: absolute; top: 135px; float: right;z-index: 99;left: 500px; display: none;">
-        <div style="margin: 0 auto;background-color: #ffffff; width: 500px; height: 405px; text-align: center;">
-            <div style="width: 450px; margin: 0 auto; ">
-                <div style="float: right;">
-                    <label style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="$('#quienes').fadeOut('slow');document.getElementById('quienesSomos').className = 'tdmenu';">
-                        x
-                    </label>
+        <link rel="stylesheet" type="text/css" href="css/est.css">
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/jquery-latest.js"></script>
+        <script type="text/javascript">
+            function menu()
+            {
+                document.getElementById('servicios').className = "tdmenusact";
+            }
+            function trian(pos)
+            {
+                switch (pos)
+                {
+                    case 1:
+                        document.getElementById('estrategicos').className = "triangulo_der moverTriangulo";
+                        document.getElementById('lblestrategicos').style.fontWeight = "bold";
+                        document.getElementById('gestiondecrisis').style.fontWeight = "normal";
+                        document.getElementById('gestiondeprensa').style.fontWeight = "normal";
+                        document.getElementById('monitoreo').style.fontWeight = "normal";
+                        document.getElementById('publicaciones').style.fontWeight = "normal";
+                        document.getElementById('institucionales').style.fontWeight = "normal";
+                        document.getElementById('eventos').style.fontWeight = "normal";
+                        document.getElementById('pesUno').style.display = "block";
+                        document.getElementById('pesDos').style.display = "none";
+                        document.getElementById('lblComInternas').style.fontWeight = "normal";
+                        ('#pesTextCuatro').fadeOut('fast');
+                        $('#pesTres').fadeOut('fast');
+                        $('#pesTextDos').fadeOut('fast');
+                        $('#pesTextTres').fadeOut('fast');
+                        $('#pesTextCinco').fadeOut('fast');
+                        $('#pesTextSeis').fadeOut('fast');
+                        $('#pesTextSiete').fadeOut('fast');
+                        setTimeout("$('#pesTextUno').fadeIn('slow')", 500);
+                        setTimeout("$('#pesUno').fadeIn('slow')", 500);
+                        //setTimeout("$('#pesDos').fadeIn('fast')", 500);
+                        break;
+                    case 2:
+                        document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo";
+                        document.getElementById('lblestrategicos').style.fontWeight = "normal";
+                        document.getElementById('gestiondecrisis').style.fontWeight = "bold";
+                        document.getElementById('gestiondeprensa').style.fontWeight = "normal";
+                        document.getElementById('monitoreo').style.fontWeight = "normal";
+                        document.getElementById('publicaciones').style.fontWeight = "normal";
+                        document.getElementById('institucionales').style.fontWeight = "normal";
+                        document.getElementById('eventos').style.fontWeight = "normal";
+                        document.getElementById('lblComInternas').style.fontWeight = "normal";
+                        $('#pesTextCuatro').fadeOut('fast');
+                        $('#pesUno').fadeOut('fast');
+                        $('#pesTres').fadeOut('fast');
+                        $('#pesTextUno').fadeOut('fast');
+                        $('#pesTextTres').fadeOut('fast');
+                        $('#pesTextCinco').fadeOut('fast');
+                        $('#pesTextSeis').fadeOut('fast');
+                        $('#pesTextSiete').fadeOut('fast');
+                        setTimeout("$('#pesTextDos').fadeIn('slow')", 500);
+                        setTimeout("$('#pesDos').fadeIn('fast')", 500);
+                        //document.getElementById('crea').className = "cambact";
+                        break;
+                    case 3:
+                        document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo2";
+                        document.getElementById('lblestrategicos').style.fontWeight = "normal";
+                        document.getElementById('gestiondecrisis').style.fontWeight = "normal";
+                        document.getElementById('gestiondeprensa').style.fontWeight = "bold";
+                        document.getElementById('monitoreo').style.fontWeight = "normal";
+                        document.getElementById('publicaciones').style.fontWeight = "normal";
+                        document.getElementById('institucionales').style.fontWeight = "normal";
+                        document.getElementById('eventos').style.fontWeight = "normal";
+                        document.getElementById('lblComInternas').style.fontWeight = "normal";
+                        $('#pesTextCuatro').fadeOut('fast');
+                        $('#pesUno').fadeOut('fast');
+                        $('#pesDos').fadeOut('fast');
+                        $('#pesTextUno').fadeOut('fast');
+                        $('#pesTextDos').fadeOut('fast');
+                        $('#pesTextCinco').fadeOut('fast');
+                        $('#pesTextSeis').fadeOut('fast');
+                        $('#pesTextSiete').fadeOut('fast');
+                        setTimeout("$('#pesTextTres').fadeIn('slow')", 500);
+                        setTimeout("$('#pesTres').fadeIn('fast')", 500);
+                        //setTimeout("$('#Seis').fadeIn('slow')",500);
+                        break;
+                    case 4:
+                        document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo3";
+                        document.getElementById('lblestrategicos').style.fontWeight = "normal";
+                        document.getElementById('gestiondecrisis').style.fontWeight = "normal";
+                        document.getElementById('gestiondeprensa').style.fontWeight = "normal";
+                        document.getElementById('monitoreo').style.fontWeight = "bold";
+                        document.getElementById('publicaciones').style.fontWeight = "normal";
+                        document.getElementById('institucionales').style.fontWeight = "normal";
+                        document.getElementById('eventos').style.fontWeight = "normal";
+                        document.getElementById('lblComInternas').style.fontWeight = "normal";
+                        $('#pesUno').fadeOut('fast');
+                        $('#pesDos').fadeOut('fast');
+                        $('#pesTres').fadeOut('fast');
+                        $('#pesTextUno').fadeOut('fast');
+                        $('#pesTextDos').fadeOut('fast');
+                        $('#pesTextTres').fadeOut('fast');
+                        $('#pesTextCinco').fadeOut('fast');
+                        $('#pesTextSeis').fadeOut('fast');
+                        $('#pesTextSiete').fadeOut('fast');
+                        setTimeout("$('#pesTextCuatro').fadeIn('fast')", 500);
+                        break;
+                    case 5:
+                        document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo4";
+                        document.getElementById('lblestrategicos').style.fontWeight = "normal";
+                        document.getElementById('gestiondecrisis').style.fontWeight = "normal";
+                        document.getElementById('gestiondeprensa').style.fontWeight = "normal";
+                        document.getElementById('monitoreo').style.fontWeight = "normal";
+                        document.getElementById('publicaciones').style.fontWeight = "bold";
+                        document.getElementById('institucionales').style.fontWeight = "bold";
+                        document.getElementById('eventos').style.fontWeight = "normal";
+                        document.getElementById('lblComInternas').style.fontWeight = "normal";
+                        $('#pesTextCuatro').fadeOut('fast');
+                        $('#pesUno').fadeOut('fast');
+                        $('#pesDos').fadeOut('fast');
+                        $('#pesTres').fadeOut('fast');
+                        $('#pesTextUno').fadeOut('fast');
+                        $('#pesTextDos').fadeOut('fast');
+                        $('#pesTextTres').fadeOut('fast');
+                        $('#pesTextSeis').fadeOut('fast');
+                        $('#pesTextSiete').fadeOut('fast');
+                        setTimeout("$('#pesTextCinco').fadeIn('slow')", 500);
+                        break;
+                    case 7:
+                        document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo6";
+                        document.getElementById('lblestrategicos').style.fontWeight = "normal";
+                        document.getElementById('gestiondecrisis').style.fontWeight = "normal";
+                        document.getElementById('gestiondeprensa').style.fontWeight = "normal";
+                        document.getElementById('monitoreo').style.fontWeight = "normal";
+                        document.getElementById('publicaciones').style.fontWeight = "normal";
+                        document.getElementById('institucionales').style.fontWeight = "normal";
+                        document.getElementById('eventos').style.fontWeight = "bold";
+                        document.getElementById('lblComInternas').style.fontWeight = "normal";
+                        $('#pesTextCuatro').fadeOut('fast');
+                        $('#pesUno').fadeOut('fast');
+                        $('#pesDos').fadeOut('fast');
+                        $('#pesTres').fadeOut('fast');
+                        $('#pesTextUno').fadeOut('fast');
+                        $('#pesTextDos').fadeOut('fast');
+                        $('#pesTextTres').fadeOut('fast');
+                        $('#pesTextCinco').fadeOut('fast');
+                        $('#pesTextSiete').fadeOut('fast');
+                        setTimeout("$('#pesTextSeis').fadeIn('slow')", 500);
+                        break;
+                    case 8:
+                        document.getElementById('estrategicos').className = "triangulo_der mueveTriangulo7";
+                        document.getElementById('lblestrategicos').style.fontWeight = "normal";
+                        document.getElementById('gestiondecrisis').style.fontWeight = "normal";
+                        document.getElementById('gestiondeprensa').style.fontWeight = "normal";
+                        document.getElementById('monitoreo').style.fontWeight = "normal";
+                        document.getElementById('publicaciones').style.fontWeight = "normal";
+                        document.getElementById('institucionales').style.fontWeight = "normal";
+                        document.getElementById('eventos').style.fontWeight = "normal";
+                        document.getElementById('lblComInternas').style.fontWeight = "bold";
+                        $('#pesTextCuatro').fadeOut('fast');
+                        $('#pesUno').fadeOut('fast');
+                        $('#pesDos').fadeOut('fast');
+                        $('#pesTres').fadeOut('fast');
+                        $('#pesTextUno').fadeOut('fast');
+                        $('#pesTextDos').fadeOut('fast');
+                        $('#pesTextTres').fadeOut('fast');
+                        $('#pesTextCinco').fadeOut('fast');
+                        $('#pesTextSeis').fadeOut('fast');
+                        setTimeout("$('#pesTextSiete').fadeIn('slow')", 500);
+                        break;
+                }
+            }
+            function primar()
+            {
+                $('#Uno').fadeIn('slow');
+                document.getElementById('diag').className = "cambact";
+                document.getElementById('crea').className = "cambact";
+                document.getElementById('rece').className = "cambact";
+            }
+            function desc(num)
+            {
+                switch (num)
+                {
+                    case 1:
+                        $('#Dos').fadeOut('slow');
+                        $('#Tres').fadeOut('slow');
+                        $('#Siete').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        document.getElementById('diag').className = "cambact";
+                        document.getElementById('dise').className = "camb";
+                        document.getElementById('imple').className = "camb";
+                        setTimeout("$('#Uno').fadeIn('slow')", 500);
+                        break;
+                    case 2:
+                        $('#Uno').fadeOut('slow');
+                        $('#Tres').fadeOut('slow');
+                        $('#Siete').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        document.getElementById('diag').className = "camb";
+                        document.getElementById('dise').className = "cambact";
+                        document.getElementById('imple').className = "camb";
+                        setTimeout("$('#Dos').fadeIn('slow')", 500);
+                        break;
+                    case 3:
+                        $('#Dos').fadeOut('slow');
+                        $('#Uno').fadeOut('slow');
+                        $('#Siete').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        document.getElementById('diag').className = "camb";
+                        document.getElementById('dise').className = "camb";
+                        document.getElementById('imple').className = "cambact";
+                        setTimeout("$('#Tres').fadeIn('slow')", 500);
+                        break;
+                    case 4:
+                        $('#Siete').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        $('#Cinco').fadeOut('slow');
+                        document.getElementById('implemen').className = "camb";
+                        document.getElementById('crea').className = "cambact";
+                        setTimeout("$('#Cuatro').fadeIn('slow')", 500);
+                        break;
+                    case 5:
+                        $('#Siete').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        $('#Cuatro').fadeOut('slow');
+                        document.getElementById('crea').className = "camb";
+                        document.getElementById('implemen').className = "cambact";
+                        setTimeout("$('#Cinco').fadeIn('slow')", 500);
+                        break;
+                    case 6:
+                        $('#Siete').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        document.getElementById('rece').className = "cambact";
+                        document.getElementById('difu').className = "camb";
+                        document.getElementById('moni').className = "camb";
+                        document.getElementById('entre').className = "camb";
+                        setTimeout("$('#Seis').fadeIn('slow')", 500);
+                        break;
+                    case 7:
+                        $('#Seis').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        document.getElementById('rece').className = "camb";
+                        document.getElementById('difu').className = "cambact";
+                        document.getElementById('moni').className = "camb";
+                        document.getElementById('entre').className = "camb";
+                        setTimeout("$('#Siete').fadeIn('slow')", 500);
+                        break;
+                    case 8:
+                        $('#Siete').fadeOut('slow');
+                        $('#Seis').fadeOut('slow');
+                        $('#Nueve').fadeOut('slow');
+                        document.getElementById('rece').className = "camb";
+                        document.getElementById('difu').className = "camb";
+                        document.getElementById('moni').className = "cambact";
+                        document.getElementById('entre').className = "camb";
+                        setTimeout("$('#Ocho').fadeIn('slow')", 500);
+                        break;
+                    case 9:
+                        $('#Siete').fadeOut('slow');
+                        $('#Ocho').fadeOut('slow');
+                        $('#Seis').fadeOut('slow');
+                        document.getElementById('rece').className = "camb";
+                        document.getElementById('difu').className = "camb";
+                        document.getElementById('moni').className = "camb";
+                        document.getElementById('entre').className = "cambact";
+                        setTimeout("$('#Nueve').fadeIn('slow')", 500);
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body onload="menu();
+        primar();" oncontextmenu="return true;">
+        <div id="contenedorPrimario" style="position: relative;">
+
+            <div id="quienes"  style="position: absolute; top: 135px; float: right;z-index: 99;left: 500px; display: none;">
+                <div style="margin: 0 auto;background-color: #ffffff; width: 500px; height: 405px; text-align: center;">
+                    <div style="width: 450px; margin: 0 auto; ">
+                        <div style="float: right;">
+                            <label style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="$('#quienes').fadeOut('slow');
+                            document.getElementById('quienesSomos').className = 'tdmenu';">
+                                x
+                            </label>
+                        </div>
+                        <br/><br/><br/><br/><br/>
+                        <label style="font-family: nunito, san-serif; font-size: 17px;">
+                            Somos  una empresa de Comunicación Corporativa con 11 años de experiencia en el mercado nacional. Nos hemos especializado en posicionar líderes de opinión y marcas nacionales y extranjeras.<br/><br/>
+
+                            Desarrollamos e implementamos estrategias de comunicación internas y externas a la medida de cada cliente. Nos diferenciamos por entregar una asesoría personalizada y flexible.
+                        </label>
+                    </div>
                 </div>
-                <br/><br/><br/><br/><br/>
-                <label style="font-family: nunito, san-serif; font-size: 17px;">
-                    Somos  una empresa de Comunicación Corporativa con 11 años de experiencia en el mercado nacional. Nos hemos especializado en posicionar líderes de opinión y marcas nacionales y extranjeras.<br/><br/>
-
-                    Desarrollamos e implementamos estrategias de comunicación internas y externas a la medida de cada cliente. Nos diferenciamos por entregar una asesoría personalizada y flexible.
-                </label>
             </div>
+            <img src="recursos/14ans.jpg" style="position: absolute;margin: 10px 0px 0px 40px;">
+            <div id="titulo" style="position: relative;">
+                <br/>
+                <img src="recursos/logos/3.jpg" style="padding-top: 6px;">
+            </div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <table border="0px" style="position: absolute;left: -5px;width: 100%; height: 400px;top: 158px; border-collapse: separate;
+                   border-spacing: 5px;
+                   border-collapse: expression('separate', cellSpacing = '5px');">
+                <tr>
+                    <td id="quienesSomos" class="tdmenu" valign="bottom" style="width: 42px;" onclick="window.location.href = 'home.html#qs';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">QUIENES&nbsp;SOMOS</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenue" style="width: 42px;" onclick="window.location.href = 'equipo.html';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">EQUIPO</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td id="servicios" class="tdmenus" style="width: 42px;" onclick="window.location.href = 'servicios.html';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">SERVICIOS</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenup" style="width: 42px;" onclick="window.location.href = 'portafolio/';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">PORTAFOLIO</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenuc" style="width: 42px;" onclick="window.location.href = 'clientes/';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">CLIENTES</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tdmenuco" style="width: 42px;" onclick="window.location.href = 'contacto.html';">
+                        <div style="position: relative; width: 42px;">
+                            <div style="position: absolute; top: -80px; left: 7px;">
+                                <h4 class="vertical_css3 menuColor">CONTACTO</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <table style="width: 700px; height: 320px;" border="0px" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="vertical-align: top;">
+                                            <div style="height: 310px; width: 200px;">
+                                                <table border="0px" style="height: 266px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td rowspan="14" style="vertical-align: top;">
+                                                                <div id="estrategicos" class="triangulo_der moverTriangulo"></div>
+                                                            </td>
+                                                            <td style="vertical-align: top;height: 24px;">
+                                                                <div onclick="trian(1);">
+                                                                    <label id="lblestrategicos" style="font-family: miFuente; font-size: 17px; font-weight: bold; cursor: pointer;">Estratégicos</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="vertical-align: top;height: 46px;">
+                                                                <div onclick="trian(8);">
+                                                                    <label id="lblComInternas" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Comunicaciones<br> Internas</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="
+                                                                height: 24px;
+                                                                ">
+                                                                <div onclick="trian(2);">
+                                                                    <label id="gestiondecrisis" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Gestión de Crisis</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="
+                                                                height: 24px;
+                                                                ">
+                                                                <div onclick="trian(3);">
+                                                                    <label id="gestiondeprensa" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Gestión de Prensa</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="
+                                                                height: 24px;
+                                                                ">
+                                                                <div onclick="trian(4);">
+                                                                    <label id="monitoreo" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Publicaciones</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="
+                                                                height: 46px;
+                                                                ">
+                                                                <div onclick="trian(5);">
+                                                                    <label id="publicaciones" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Relaciones<br>Publicas</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="display: none;">
+                                                            <td>
+                                                                <div onclick="trian(5);">
+                                                                    <label id="institucionales" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Publicas</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="
+                                                                height: 24px;
+                                                                ">
+                                                                <div onclick="trian(7);">
+                                                                    <label id="eventos" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Eventos</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="height: 10px;">
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td style="vertical-align: top;">
+                                            <div style="height: 310px; width: 450px;">
+                                                <table cellspacing="0" cellpadding="0" border="0px" style="width: 450px; height: 300px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: top;">
+                                                                <div id="pesestrategicos">
+                                                                    <table border="0px;" cellspacing="0" cellpadding="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="height: 140px; vertical-align: top; text-align: justify;">
+                                                                                    <!-- TEXTOS INTERIORES -->
+                                                                                    <div id="pesTextUno">
+                                                                                        <div id="Uno" style="display: none;">
+                                                                                            <label style="font-size: 13px;font-family: 'Sintony', sans-serif; text-align: justify;">
+                                                                                                A partir de un acabado diagnóstico de las necesidades y políticas comunicacionales de nuestros clientes, desarrollamos estrategias a la medida.  Contamos con un equipo de profesionales altamente capacitado que lleva a cabo un plan de acción.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div id="Dos" style="display: none;">
+                                                                                            <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
+                                                                                                Falta texto que explique brevemente en que consiste
+                                                                                                este punto del tema servicios. En Marzo de 1999 inicia
+                                                                                                actividades como consultora independiente. En 1997
+                                                                                                ingresa a El Mercurio, Economía y Negocios. Inicia sus
+                                                                                                actividades periodísticas en 1995 en el diario Estrategia, en
+                                                                                                el Departamento de Estudios, Mercado Automotriz.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div id="Tres" style="display: none;">
+                                                                                            <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
+                                                                                                Falta texto que explique brevemente en que consiste
+                                                                                                este punto del tema servicios. En Marzo de 1999 inicia
+                                                                                                actividades como consultora independiente. En 1997
+                                                                                                ingresa a El Mercurio, Economía y Negocios. Inicia sus
+                                                                                                actividades periodísticas en 1995 en el diario Estrategia, en
+                                                                                                el Departamento de Estudios, Mercado Automotriz.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="pesTextDos" style="display: none;">
+                                                                                        <div id="Cuatro">
+                                                                                            <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
+                                                                                                Identificamos riesgos, creamos estrategias y desarrollamos manuales de gestión para minimizar el impacto de una crisis.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div id="Cinco" style="display: none;">
+                                                                                            <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
+                                                                                                Falta texto que explique brevemente en que consiste
+                                                                                                este punto del tema servicios. En Marzo de 1999 inicia
+                                                                                                actividades como consultora independiente. En 1997
+                                                                                                ingresa a El Mercurio, Economía y Negocios. Inicia sus
+                                                                                                actividades periodísticas en 1995 en el diario Estrategia, en
+                                                                                                el Departamento de Estudios, Mercado Automotriz.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="pesTextTres" style="display: none;">
+                                                                                        <div id="Seis">
+                                                                                            <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
+
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div id="Siete" style="display: none;">
+                                                                                            <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
+                                                                                                Falta texto que explique brevemente en que consiste
+                                                                                                este punto del tema servicios. En Marzo de 1999 inicia
+                                                                                                actividades como consultora independiente. En 1997
+                                                                                                ingresa a El Mercurio, Economía y Negocios. Inicia sus
+                                                                                                actividades periodísticas en 1995 en el diario Estrategia, en
+                                                                                                el Departamento de Estudios, Mercado Automotriz.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div id="Ocho" style="display: none;">
+                                                                                            <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
+                                                                                                Falta texto que explique brevemente en que consiste
+                                                                                                este punto del tema servicios. En Marzo de 1999 inicia
+                                                                                                actividades como consultora independiente. En 1997
+                                                                                                ingresa a El Mercurio, Economía y Negocios. Inicia sus
+                                                                                                actividades periodísticas en 1995 en el diario Estrategia, en
+                                                                                                el Departamento de Estudios, Mercado Automotriz.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div id="Nueve" style="display: none;">
+                                                                                            <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
+                                                                                                Falta texto que explique brevemente en que consiste
+                                                                                                este punto del tema servicios. En Marzo de 1999 inicia
+                                                                                                actividades como consultora independiente. En 1997
+                                                                                                ingresa a El Mercurio, Economía y Negocios. Inicia sus
+                                                                                                actividades periodísticas en 1995 en el diario Estrategia, en
+                                                                                                el Departamento de Estudios, Mercado Automotriz.
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="pesTextCuatro" style="display: none;position: absolute;width: 425px;">
+                                                                                        <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
+                                                                                            Contamos con un equipo de profesionales con amplia experiencia en el desarrollo de publicaciones.
+                                                                                        </label>
+                                                                                        <br/><br/>
+                                                                                        <div id="pesUl" style="line-height: 28px;padding-left: 18px;">
+                                                                                            <ul class="a" style="line-height: 25px;margin-top: 0px;">
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Anuarios</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Memorias</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Revistas internas</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Boletines</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diario Mural</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Brochure</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Sitios web</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">News letters</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Intranet</label></li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- TEXTOS INTERIORES -->
+                                                                                    <div id="pesUno" style="line-height: 28px;position: absolute; left: 533px;">
+                                                                                        <!--
+                                                                                        <a id="diag" class="camb" onclick="desc(1);">
+                                                                                            <label style="font-size: 19px; cursor: pointer;">Diagnóstico de comunicación interna y externa.</label>
+                                                                                        </a><br/>
+                                                                                        <a id="dise" class="camb" onclick="desc(2);">
+                                                                                            <label style="font-size: 19px; cursor: pointer;">Diseño de Plan Estrategico.</label>
+                                                                                        </a><br/>
+                                                                                        <a id="imple" class="camb" onclick="desc(3);">
+                                                                                            <label style="font-size: 19px; cursor: pointer;">Implementación.</label>
+                                                                                        </a><br/><br/>
+                                                                                        -->
+                                                                                        <ul class="a">
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diagnóstico de comunicación externa.</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño de Plan Estrategico.</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Implementación de estrategia.</label></li>
+                                                                                        </ul><br/><br/>
+                                                                                    </div>
+                                                                                    <div id="pesDos" style="line-height: 28px;position: absolute; left: 533px;display: none;">
+                                                                                        <ul class="a">
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Identificación de riesgos y oportunidades</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño de estrategia de control y manejo de crisis</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Creación de manual de crisis</label></li>
+                                                                                        </ul><br/><br/>
+                                                                                    </div>
+                                                                                    <div id="pesTres" style="line-height: 28px;position: absolute; left: 533px;display: none; ">
+                                                                                        <ul class="a" style="margin-top: 0px; text-align: justify;">
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Recepción y canalización de requerimientos de periodistas</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Difusión de noticias</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Monitoreo de prensa nacional e internacional</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Envío de prensa diario con noticias del cliente y su ámbito de negocio</label></li>
+                                                                                            <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Informe Mensual con Análisis Cualitativo y Cuantitativo de la Gestión </label></li>
+                                                                                        </ul><br/><br/><br/><br/>
+                                                                                    </div>
+                                                                                    <div id="pesTextCinco" style="display: none;">
+                                                                                        <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
+                                                                                            Elaboramos e implementamos estrategias de RRPP para potenciar las relaciones de nuestros clientes con distintos públicos de interés.
+                                                                                        </label>
+                                                                                        <div style="line-height: 28px;padding-left: 18px;">
+                                                                                            <ul class="a">
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño de estrategia de relaciones públicas</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Elaboración de planes de contacto</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Implementación de estrategia </label></li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="pesTextSeis" style="display: none;">
+                                                                                        <div style="line-height: 28px;padding-left: 18px;">
+                                                                                            <ul class="a">
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Producción General </label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Asesoría en el diseño de invitaciones, impresión, despacho y seguimiento</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Coordinación general para la contratación carpas, banquetería, entretención, música, promotoras y otros.</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Selección del regalo corporativo</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Coordinación fotográfica para publicaciones en medios.</label></li>
+                                                                                            </ul><br/><br/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="pesTextSiete" style="display: none;">
+                                                                                        <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
+                                                                                            Realizamos un diagnóstico de comunicaciones internas, elaboramos planes estratégicos y creamos canales de comunicación eficientes para potenciar la cultura corporativa al interior de la empresa.
+                                                                                        </label>
+                                                                                        <div id="pesSiete" style="line-height: 28px;padding-left: 18px;">
+                                                                                            <ul class="a">
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diagnóstico de comunicación interna</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Elaboración de plan estratégico</label></li>
+                                                                                                <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño e implementación de medios internos</label></li>
+                                                                                            </ul><br/><br/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="height: 187px; vertical-align: bottom;text-align: center;">
+                        <label style="font-size: 13px;font-family: miFuente;position: absolute;left: 283px;">DON CARLOS 3171, OF B / LAS CONDES, STGO / TEL: (56 2) 2249 76 55 - (56 2) 2245 10 83</label>
+                        <div style="float: right; margin-right: 9px;">
+                            <img src="recursos/img/f_logo.png" title="Facebook" style="width: 28px; height: 28px;">
+                            <img src="recursos/img/twitter.png" title="Twitter" style="width: 28px; height: 28px;">
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
-    </div>
-    <img src="recursos/14ans.jpg" style="position: absolute;margin: 10px 0px 0px 40px;">
-    <div id="titulo" style="position: relative;">
-        <br/>
-        <img src="recursos/logos/3.jpg" style="padding-top: 6px;">
-    </div>
-    <br/><br/><br/><br/><br/><br/><br/>
-    <table border="0px" style="position: absolute;left: -5px;width: 100%; height: 400px;top: 158px; border-collapse: separate;
-  border-spacing: 5px;
-  border-collapse: expression('separate', cellSpacing = '5px');">
-        <tr>
-            <td id="quienesSomos" class="tdmenu" valign="bottom" style="width: 42px;" onclick="window.location.href = 'home.html#qs';">
-                <div style="position: relative; width: 42px;">
-                    <div style="position: absolute; top: -80px; left: 7px;">
-                        <h4 class="vertical_css3 menuColor">QUIENES&nbsp;SOMOS</h4>
-                    </div>
-                </div>
-            </td>
-            <td class="tdmenue" style="width: 42px;" onclick="window.location.href = 'equipo.html';">
-                <div style="position: relative; width: 42px;">
-                    <div style="position: absolute; top: -80px; left: 7px;">
-                        <h4 class="vertical_css3 menuColor">EQUIPO</h4>
-                    </div>
-                </div>
-            </td>
-            <td id="servicios" class="tdmenus" style="width: 42px;" onclick="window.location.href = 'servicios.html';">
-                <div style="position: relative; width: 42px;">
-                    <div style="position: absolute; top: -80px; left: 7px;">
-                        <h4 class="vertical_css3 menuColor">SERVICIOS</h4>
-                    </div>
-                </div>
-            </td>
-            <td class="tdmenup" style="width: 42px;" onclick="window.location.href = 'portafolio/';">
-                <div style="position: relative; width: 42px;">
-                    <div style="position: absolute; top: -80px; left: 7px;">
-                        <h4 class="vertical_css3 menuColor">PORTAFOLIO</h4>
-                    </div>
-                </div>
-            </td>
-            <td class="tdmenuc" style="width: 42px;" onclick="window.location.href = 'clientes/';">
-                <div style="position: relative; width: 42px;">
-                    <div style="position: absolute; top: -80px; left: 7px;">
-                        <h4 class="vertical_css3 menuColor">CLIENTES</h4>
-                    </div>
-                </div>
-            </td>
-            <td class="tdmenuco" style="width: 42px;" onclick="window.location.href = 'contacto.html';">
-                <div style="position: relative; width: 42px;">
-                    <div style="position: absolute; top: -80px; left: 7px;">
-                        <h4 class="vertical_css3 menuColor">CONTACTO</h4>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div>
-                    <table style="width: 700px; height: 320px;" border="0px" cellspacing="0" cellpadding="0">
-                        <tbody>
-                            <tr>
-                                <td style="vertical-align: top;">
-                                    <div style="height: 310px; width: 200px;">
-                                        <table border="0px" style="height: 266px;">
-                                            <tbody>
-                                            <tr>
-                                                <td rowspan="14" style="vertical-align: top;">
-                                                    <div id="estrategicos" class="triangulo_der moverTriangulo"></div>
-                                                </td>
-                                                <td style="vertical-align: top;height: 24px;">
-                                                    <div onclick="trian(1);">
-                                                        <label id="lblestrategicos" style="font-family: miFuente; font-size: 17px; font-weight: bold; cursor: pointer;">Estratégicos</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="vertical-align: top;height: 46px;">
-                                                    <div onclick="trian(8);">
-                                                        <label id="lblComInternas" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Comunicaciones<br> Internas</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="
-    height: 24px;
-">
-                                                    <div onclick="trian(2);">
-                                                        <label id="gestiondecrisis" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Gestión de Crisis</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="
-    height: 24px;
-">
-                                                    <div onclick="trian(3);">
-                                                        <label id="gestiondeprensa" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Gestión de Prensa</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="
-    height: 24px;
-">
-                                                    <div onclick="trian(4);">
-                                                        <label id="monitoreo" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Publicaciones</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="
-    height: 46px;
-">
-                                                    <div onclick="trian(5);">
-                                                        <label id="publicaciones" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Relaciones<br>Publicas</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="display: none;">
-                                                <td>
-                                                    <div onclick="trian(5);">
-                                                        <label id="institucionales" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Publicas</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="
-    height: 24px;
-">
-                                                    <div onclick="trian(7);">
-                                                        <label id="eventos" style="font-family: miFuente; font-size: 17px; cursor: pointer; font-weight: normal;">Eventos</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="height: 10px;">
-
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <div style="height: 310px; width: 450px;">
-                                        <table cellspacing="0" cellpadding="0" border="0px" style="width: 450px; height: 300px;">
-                                            <tbody>
-                                                <tr>
-                                                    <td style="vertical-align: top;">
-                                                        <div id="pesestrategicos">
-                                                            <table border="0px;" cellspacing="0" cellpadding="0">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td style="height: 140px; vertical-align: top;">
-                                                                            <!-- TEXTOS INTERIORES -->
-                                                                            <div id="pesTextUno">
-                                                                                <div id="Uno" style="display: none;">
-                                                                                    <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-                                                                                        A partir de un acabado diagnóstico de las necesidades y políticas comunicacionales de nuestros clientes, desarrollamos estrategias a la medida.  Contamos con un equipo de profesionales altamente capacitado que lleva a cabo un plan de acción.
-                                                                                    </label>
-                                                                                </div>
-                                                                                <div id="Dos" style="display: none;">
-                                                                                    <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
-                                                                                        Falta texto que explique brevemente en que consiste
-                                                                                        este punto del tema servicios. En Marzo de 1999 inicia
-                                                                                        actividades como consultora independiente. En 1997
-                                                                                        ingresa a El Mercurio, Economía y Negocios. Inicia sus
-                                                                                        actividades periodísticas en 1995 en el diario Estrategia, en
-                                                                                        el Departamento de Estudios, Mercado Automotriz.
-                                                                                    </label>
-                                                                                </div>
-                                                                                <div id="Tres" style="display: none;">
-                                                                                    <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
-                                                                                        Falta texto que explique brevemente en que consiste
-                                                                                        este punto del tema servicios. En Marzo de 1999 inicia
-                                                                                        actividades como consultora independiente. En 1997
-                                                                                        ingresa a El Mercurio, Economía y Negocios. Inicia sus
-                                                                                        actividades periodísticas en 1995 en el diario Estrategia, en
-                                                                                        el Departamento de Estudios, Mercado Automotriz.
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="pesTextDos" style="display: none;">
-                                                                                <div id="Cuatro">
-                                                                                    <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-                                                                                        Identificamos riesgos, creamos estrategias y desarrollamos manuales de gestión para minimizar el impacto de una crisis.
-                                                                                    </label>
-                                                                                </div>
-                                                                                <div id="Cinco" style="display: none;">
-                                                                                    <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-                                                                                        Falta texto que explique brevemente en que consiste
-                                                                                        este punto del tema servicios. En Marzo de 1999 inicia
-                                                                                        actividades como consultora independiente. En 1997
-                                                                                        ingresa a El Mercurio, Economía y Negocios. Inicia sus
-                                                                                        actividades periodísticas en 1995 en el diario Estrategia, en
-                                                                                        el Departamento de Estudios, Mercado Automotriz.
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="pesTextTres" style="display: none;">
-                                                                                <div id="Seis">
-                                                                                    <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-
-                                                                                    </label>
-                                                                                </div>
-                                                                                <div id="Siete" style="display: none;">
-                                                                                    <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-                                                                                        Falta texto que explique brevemente en que consiste
-                                                                                        este punto del tema servicios. En Marzo de 1999 inicia
-                                                                                        actividades como consultora independiente. En 1997
-                                                                                        ingresa a El Mercurio, Economía y Negocios. Inicia sus
-                                                                                        actividades periodísticas en 1995 en el diario Estrategia, en
-                                                                                        el Departamento de Estudios, Mercado Automotriz.
-                                                                                    </label>
-                                                                                </div>
-                                                                                <div id="Ocho" style="display: none;">
-                                                                                    <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-                                                                                        Falta texto que explique brevemente en que consiste
-                                                                                        este punto del tema servicios. En Marzo de 1999 inicia
-                                                                                        actividades como consultora independiente. En 1997
-                                                                                        ingresa a El Mercurio, Economía y Negocios. Inicia sus
-                                                                                        actividades periodísticas en 1995 en el diario Estrategia, en
-                                                                                        el Departamento de Estudios, Mercado Automotriz.
-                                                                                    </label>
-                                                                                </div>
-                                                                                <div id="Nueve" style="display: none;">
-                                                                                    <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-                                                                                        Falta texto que explique brevemente en que consiste
-                                                                                        este punto del tema servicios. En Marzo de 1999 inicia
-                                                                                        actividades como consultora independiente. En 1997
-                                                                                        ingresa a El Mercurio, Economía y Negocios. Inicia sus
-                                                                                        actividades periodísticas en 1995 en el diario Estrategia, en
-                                                                                        el Departamento de Estudios, Mercado Automotriz.
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="pesTextCuatro" style="display: none;position: absolute;width: 425px;">
-                                                                                <label style="font-size: 13px;font-family: 'Sintony', sans-serif;">
-                                                                                    Contamos con un equipo de profesionales con amplia experiencia en el desarrollo de publicaciones.
-                                                                                </label>
-                                                                                <br/><br/>
-                                                                                <div id="pesUl" style="line-height: 28px;padding-left: 18px;">
-                                                                                <ul class="a" style="line-height: 25px;margin-top: 0px;">
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Anuarios</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Memorias</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Revistas internas</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Boletines</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diario Mural</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Brochure</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Sitios web</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">News letters</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Intranet</label></li>
-                                                                                </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- TEXTOS INTERIORES -->
-                                                                            <div id="pesUno" style="line-height: 28px;position: absolute; left: 533px;">
-                                                                                <!--
-                                                                                <a id="diag" class="camb" onclick="desc(1);">
-                                                                                    <label style="font-size: 19px; cursor: pointer;">Diagnóstico de comunicación interna y externa.</label>
-                                                                                </a><br/>
-                                                                                <a id="dise" class="camb" onclick="desc(2);">
-                                                                                    <label style="font-size: 19px; cursor: pointer;">Diseño de Plan Estrategico.</label>
-                                                                                </a><br/>
-                                                                                <a id="imple" class="camb" onclick="desc(3);">
-                                                                                    <label style="font-size: 19px; cursor: pointer;">Implementación.</label>
-                                                                                </a><br/><br/>
-                                                                                -->
-                                                                                <ul class="a">
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diagnóstico de comunicación externa.</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño de Plan Estrategico.</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Implementación de estrategia.</label></li>
-                                                                                </ul><br/><br/>
-                                                                            </div>
-                                                                            <div id="pesDos" style="line-height: 28px;position: absolute; left: 533px;display: none;">
-                                                                                <ul class="a">
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Identificación de riesgos y oportunidades</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño de estrategia de control y manejo de crisis</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Creación de manual de crisis</label></li>
-                                                                                </ul><br/><br/>
-                                                                            </div>
-                                                                            <div id="pesTres" style="line-height: 28px;position: absolute; left: 533px;display: none;">
-                                                                                <ul class="a" style="margin-top: 0px;">
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Recepción y canalización de requerimientos de periodistas</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Difusión de noticias</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Monitoreo de prensa nacional e internacional</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Envío de prensa diario con noticias del cliente y su ámbito de negocio</label></li>
-                                                                                    <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Informe Mensual con Análisis Cualitativo y Cuantitativo de la Gestión </label></li>
-                                                                                </ul><br/><br/><br/><br/>
-                                                                            </div>
-                                                                            <div id="pesTextCinco" style="display: none;">
-                                                                                <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
-                                                                                    Elaboramos e implementamos estrategias de RRPP para potenciar las relaciones de nuestros clientes con distintos públicos de interés.
-                                                                                </label>
-                                                                                <div style="line-height: 28px;padding-left: 18px;">
-                                                                                    <ul class="a">
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño de estrategia de relaciones públicas</label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Elaboración de planes de contacto</label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Implementación de estrategia </label></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="pesTextSeis" style="display: none;">
-                                                                                <div style="line-height: 28px;padding-left: 18px;">
-                                                                                    <ul class="a">
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Producción General </label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Asesoría en el diseño de invitaciones, impresión, despacho y seguimiento</label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Coordinación general para la contratación carpas, banquetería, entretención, música, promotoras y otros.</label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Selección del regalo corporativo</label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Coordinación fotográfica para publicaciones en medios.</label></li>
-                                                                                    </ul><br/><br/>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="pesTextSiete" style="display: none;">
-                                                                                <label style="font-family: 'Sintony', sans-serif;font-size: 13px;">
-                                                                                    Realizamos un diagnóstico de comunicaciones internas, elaboramos planes estratégicos y creamos canales de comunicación eficientes para potenciar la cultura corporativa al interior de la empresa.
-                                                                                </label>
-                                                                                <div id="pesSiete" style="line-height: 28px;padding-left: 18px;">
-                                                                                    <ul class="a">
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diagnóstico de comunicación interna</label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Elaboración de plan estratégico</label></li>
-                                                                                        <li><label style="font-family: 'Sintony', sans-serif;font-size: 13px; cursor: pointer;">Diseño e implementación de medios internos</label></li>
-                                                                                    </ul><br/><br/>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="7" style="height: 187px; vertical-align: bottom;text-align: center;">
-                <label style="font-size: 13px;font-family: miFuente;position: absolute;left: 283px;">DON CARLOS 3171, OF B / LAS CONDES, STGO / TEL: (56 2) 2249 76 55 - (56 2) 2245 10 83</label>
-                <div style="float: right; margin-right: 9px;">
-                    <img src="recursos/img/f_logo.png" title="Facebook" style="width: 28px; height: 28px;">
-                    <img src="recursos/img/twitter.png" title="Twitter" style="width: 28px; height: 28px;">
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
-</body>
+    </body>
 </html>

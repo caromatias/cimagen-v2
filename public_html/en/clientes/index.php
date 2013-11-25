@@ -34,7 +34,7 @@
         <center>
             <div style="float: right; width: 22px">
                 <label style="font-family: nunito, san-serif; font-size: 20px; color: #FFFFFF; cursor: pointer;" onclick="$('#foto').fadeOut('slow');">
-                    x
+                    Close
                 </label>
             </div>
             <table cellspacing="10" cellpadding="20">

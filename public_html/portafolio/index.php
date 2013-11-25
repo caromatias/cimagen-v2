@@ -303,7 +303,7 @@
             }
         </script>
     </head>
-    <body id="bod" onload="menu();resultados();" oncontextmenu="return false;">
+    <body id="bod" onload="menu();resultados();" oncontextmenu="return true;">
         <div id="contenedorPrimario" style="position: relative;">
             <div id="foto" style="position: absolute; background: rgba(0, 0, 0, 0.5); width: 450px; height: 535px; left: 575px;top: 153px;z-index: 1;display: none;">
                 <center>
@@ -425,7 +425,7 @@
                                                             include "paginadorGes.php";
                                                         }
                                                     } else {
-                                                        include "paginador.php";
+                                                        include "paginadorGes.php";
                                                     }
                                                     ?>
                                                 </div>
@@ -460,6 +460,6 @@ if (isset($_GET['i'])) {
         echo "<script type='text/javascript'>document.getElementById('gestion').className = 'vertical_css3 submenact';</script>";
     }
 } else {
-    echo "<script type='text/javascript'>document.getElementById('eventos').className = 'vertical_css3 submenact';</script>";
+    echo "<script type='text/javascript'>document.getElementById('gestion').className = 'vertical_css3 submenact';</script>";
 }
 ?>

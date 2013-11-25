@@ -34,7 +34,7 @@ if($resultado == true)
     while($reg = mysql_fetch_array($resultado))
     {
         echo "<td style='vertical-align: top; text-align: center;'>
-                                                                <img id='resul".$contadorResul."' src='".substr($reg[2], 6)."' style='display: none;cursor: pointer;width: 111px; height: 322px;' onclick=\"javascript: window.open('".substr($reg[4], 6)."','','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=1000, height=1000, top=85, left=140');\" onmouseover='muestra(".$reg[0].");' onmouseout='nom(".$reg[0].");';/>
+                                                                <img id='resul".$contadorResul."' src='".substr($reg[2], 6)."' style='display: none;cursor: pointer;width: 109px; height: 322px; border-left: 1px solid gray; border-right: 1px solid gray;' onclick=\"javascript: window.open('".substr($reg[4], 6)."','','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=1000, height=1000, top=85, left=140');\" onmouseover='muestra(".$reg[0].");' onmouseout='nom(".$reg[0].");';/>
                                                                 <br>
                                                                 <div id='".$reg[0]."' style='display: none;'><center><div class='triangulo_inf'>.</div><label style='font-size: 14px;;font-family: 'Sintony', sans-serif;'>".$reg[1]."</label></center></div>
                                                              </td>";
