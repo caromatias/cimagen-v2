@@ -20,6 +20,12 @@
                 setTimeout(function() {
                     $('#cargando').fadeOut('slow')
                 }, 4000);
+                setTimeout(function() {
+                    $('#cargando2').fadeOut(1000)
+                }, 3500);
+                setTimeout(function() {
+                    $('#cargando2').fadeIn(1000)
+                }, 500);
             }
         </script>
         <style>
@@ -29,24 +35,22 @@
             }
         </style>
     </head>
-    <body onload="retrasa();">
+    <body onload="retrasa();" oncontextmenu="return true;">
         <div id="contenedorPrimario" style="position: relative;">
-            <div id='cargando' style="position: absolute; top: 160px;display: none; background-image: url('recursos/bn.jpg'); height: 325px;width: 1025px;">
+            <div id='cargando' style="position: absolute; top: 160px;display: none; background-image: url('recursos/bn3.jpg'); height: 325px;width: 1025px;">
                 <center>
                     <br/><br/><br/>
                     <br/><br/><br/>
-                    <br/><br/><br/>
-                    <br/><br/><br/><br/><br/>
-                   
+                    <div id="cargando2" style="top: 160px; display: none; background-image: url('recursos/tb.png'); height: 60px; width: 1025px; background-repeat: no-repeat; background-size: 100% 100%;" ></div>
                 </center>
             </div>
             <div style="position: absolute;top: 469px;z-index: 999;left: 30px;">
 
             </div>
+            <img src="recursos/14ans.jpg" style="position: absolute;margin: 10px 0px 0px 40px;">
             <div id="titulo" style="position: relative;">
                 <br/>
-
-                <img src="recursos/logos/1.png" style="padding-top: 4px;"/>
+                <img src="recursos/logos/1.jpg" style="padding-top: 6px;"/>
             </div>
 
             <table border="0px" style="width: 100%; height: 549px; border-collapse: separate;

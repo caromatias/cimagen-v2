@@ -3,9 +3,9 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/est.css">
-    <script type="text/javascript" src="../js/global.js"></script>
-    <script type="text/javascript" src="../js/jquery-latest.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/est.css">
+    <script type="text/javascript" src="../../js/global.js"></script>
+    <script type="text/javascript" src="../../js/jquery-latest.js"></script>
     <script type="text/javascript" src="ajax.js"></script>
     <script type="text/javascript">
         function menu()
@@ -28,7 +28,7 @@
         }
     </script>
 </head>
-<body onload="menu();">
+<body onload="menu();" oncontextmenu="return true;">
 <div id="contenedorPrimario" style="position: relative;">
     <div id="foto" style="position: absolute; background: rgba(0, 0, 0, 0.5); width: 450px; height: 535px; left: 550px;top: 145px;z-index: 1;display: none;">
         <center>
@@ -40,16 +40,16 @@
             <table cellspacing="10" cellpadding="20">
                 <tr>
                     <td>
-                        <img style="border: 3px solid #FFFFFF;" id="fotoGrande" src="../recursos/eventos/8abcee_relajacionazul.jpg" width="360" height="460"/>
+                        <img style="border: 3px solid #FFFFFF;" id="fotoGrande" src="../../recursos/eventos/8abcee_relajacionazul.jpg" width="360" height="460"/>
                     </td>
                 </tr>
             </table>
         </center>
     </div>
+    <img src="../../recursos/14ans.jpg" style="position: absolute;margin: 10px 0px 0px 40px;">
     <div id="titulo" style="position: relative;">
         <br/>
-
-        <img src="../recursos/logos/5.jpg" style="padding-left: 14px;padding-top: 1px;">
+        <img src="../../recursos/logos/5.jpg" style="padding-top: 6px;">
     </div>
 
     <table cellspacing="0" cellpadding="0">
@@ -62,42 +62,42 @@
                         <td id="quienesSomos" class="tdmenu" valign="bottom" style="width: 42px;"onclick="window.location.href = '../home.html#qs';">
                             <div style="position: relative; width: 42px;">
                                 <div style="position: absolute; top: -80px; left: 7px;">
-                                    <h4 class="vertical_css3 menuColor">QUIENES&nbsp;SOMOS</h4>
+                                    <h4 class="vertical_css3 menuColor">WHO WE ARE</h4>
                                 </div>
                             </div>
                         </td>
                         <td class="tdmenue" style="width: 42px;" onclick="window.location.href = '../equipo.html';">
                             <div style="position: relative; width: 42px;">
                                 <div style="position: absolute; top: -80px; left: 7px;">
-                                    <h4 class="vertical_css3 menuColor">EQUIPO</h4>
+                                    <h4 class="vertical_css3 menuColor">TEAM</h4>
                                 </div>
                             </div>
                         </td>
                         <td id="servicios" class="tdmenus" style="width: 42px;" onclick="window.location.href = '../servicios.html';">
                             <div style="position: relative; width: 42px;">
                                 <div style="position: absolute; top: -80px; left: 7px;">
-                                    <h4 class="vertical_css3 menuColor">SERVICIOS</h4>
+                                    <h4 class="vertical_css3 menuColor">SERVICES</h4>
                                 </div>
                             </div>
                         </td>
                         <td id="portafolio" class="tdmenup" style="width: 42px;" onclick="window.location.href = '../portafolio/';">
                             <div style="position: relative; width: 42px;">
                                 <div style="position: absolute; top: -80px; left: 7px;">
-                                    <h4 class="vertical_css3 menuColor">PORTAFOLIO</h4>
+                                    <h4 class="vertical_css3 menuColor">PORTFOLIO</h4>
                                 </div>
                             </div>
                         </td>
                         <td id="clientes" class="tdmenuc" style="width: 42px;" onclick="window.location.href = '../clientes/'">
                             <div style="position: relative; width: 42px;">
                                 <div style="position: absolute; top: -80px; left: 7px;">
-                                    <h4 class="vertical_css3 menuColor">CLIENTES</h4>
+                                    <h4 class="vertical_css3 menuColor">CUSTOMERS</h4>
                                 </div>
                             </div>
                         </td>
                         <td class="tdmenuco" style="width: 42px;" onclick="window.location.href = '../contacto.html';">
                             <div style="position: relative; width: 42px;">
                                 <div style="position: absolute; top: -80px; left: 7px;">
-                                    <h4 class="vertical_css3 menuColor">CONTACTO</h4>
+                                    <h4 class="vertical_css3 menuColor">CONTACT</h4>
                                 </div>
                             </div>
                         </td>
@@ -118,7 +118,7 @@
                                         </td>
                                         <td>
                                             <a href="?acl=actuales">
-                                                <h1 id="actuales" class="vertical_css3 submen2">Actuales</h1>
+                                                <h1 id="actuales" class="vertical_css3 submen2">Current</h1>
                                             </a>
                                         </td>
                                         <td>

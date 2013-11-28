@@ -23,6 +23,8 @@
                 }, 500);
                 setTimeout("$('#trian').fadeIn('slow');", 1000);
                 setTimeout("$('#p2').fadeIn('slow');", 1000);
+                $('#infoP2').addClass('movido');
+                
             }
             function movP3()
             {
@@ -141,7 +143,7 @@
                         document.getElementById('period').style.fontSize = '14px';
                         $('#periodistas').fadeIn();
                         setTimeout(function(){$('#ejecvas').fadeOut();},500)
-                        $('#p2').fadeOut('slow');
+                        $('#p4').fadeOut('slow');
                         $('#p1').fadeOut('slow');
                         $('#p2').fadeOut('slow');
                         //document.getElementById('ejecvas').style.display = 'none';
@@ -206,7 +208,7 @@
                     </label>
                 </label>
             </div>
-            <div id="infoP2" class="mover" style="position: absolute; top: 495px; float: right;z-index: 99;left: 505px;">
+            <div id="infoP2" class="mover" style="background-color: #ffffff; position: absolute; top: 495px; float: right;z-index: 99;left: 505px;">
                 <label style="font-family: 'Sintony', sans-serif; font-size: 14px;">SOCIA<br/>
                     DIRECTORA EJECUTIVA<br/>
                     <a href="mailto:acorrea@cimagen.cl" style="text-decoration: none; color: #000000;">acorrea@cimagen.cl</a><br/>
@@ -224,7 +226,10 @@
                 </label>
             </div>
 
-            <div id="trian" class="triangulo_der_soc" style="position: absolute; top: 164px; z-index: 99;left: 295px;width: 0px; height: 0px;display: none;">
+            <div id="trian" class="triangulo_der_soc" style="position: absolute; top: 164px; z-index: 99;left: 295px;width: 0px; height: 0px;display: none; cursor: pointer;" onclick="devP2();$('#p1').fadeOut('slow');
+                                    $('#trian').fadeOut('slow');
+                                    $('#ima2').fadeIn('slow');
+                                    $('#ima3').fadeIn('slow');">
             </div>
             <div id="ejecvas" style="position: absolute; top: 152px; float: right;z-index: 99;left: 295px; display: none;">
                 <div style="margin: 0 auto;background-color: #ffffff; width: 685px; height: 430px; text-align: center; margin-left: -5px;">
@@ -235,7 +240,7 @@
                                         <tbody>
                                         <div style="height: 7px;"></div>
                                         <div id="ima1" onclick="$('#p4').fadeIn('slow');" class="sombra" style="display: table-cell;vertical-align: bottom;cursor: pointer;width: 200px; height: 319px; background-image: url('recursos/socias/claudia_raggi.jpg');">
-                                            <div id="i1" style="background:rgba(0,0,0,0.2);width: 200px; height: 65px;">
+                                            <div id="i1" style="background:rgba(0,0,0,0.5);width: 200px; height: 65px;">
                                                 <label style="color: #FFFFFF;font-size: 18px; font-family: 'Sintony', sans-serif;font-weight: 500; text-align: right;">
                                                     CLAUDIA RAGGI<br/>
                                                     HICKMANN
@@ -318,7 +323,7 @@
                 <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
                     <div style="width: 450px; margin: 0 auto; text-align: left;">
                         <div style="float: right;">
-                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="$('#p1').fadeOut('slow');
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 14px   ; cursor: pointer;" onclick="$('#p1').fadeOut('slow');
                                     $('#trian').fadeOut('slow');
                                     $('#ima2').fadeIn('slow');
                                     $('#ima3').fadeIn('slow');">
@@ -350,7 +355,7 @@
                 <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
                     <div style="width: 450px; margin: 0 auto; text-align: left;">
                         <div style="float: right;">
-                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="devP2();">
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 14px   ; cursor: pointer;" onclick="devP2();">
                                 Volver<span>Atras</span>
                             </label>
                         </div>
@@ -375,7 +380,7 @@
                 <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
                     <div style="width: 450px; margin: 0 auto; text-align: left;">
                         <div style="float: right;">
-                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="devP3();">
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 14px   ; cursor: pointer;" onclick="devP3();">
                                 Volver<span>Atras</span>
                             </label>
                         </div>
@@ -394,7 +399,7 @@
                 <div style="margin: 0 auto;background-color: #ffffff; width: 525px; height: 460px; text-align: center;">
                     <div style="width: 450px; margin: 0 auto; text-align: left;">
                         <div style="float: right;">
-                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 17px   ; cursor: pointer;" onclick="$('#p4').fadeOut('slow');">
+                            <label class="equis tooltip" style="font-family: nunito, san-serif; font-size: 14px   ; cursor: pointer;" onclick="$('#p4').fadeOut('slow');">
                                 Volver<span>Atras</span>
                             </label>
                         </div>
@@ -402,19 +407,23 @@
                         <div style="width: 410px;">
                             <label style="font-family: 'Sintony', sans-serif; font-size: 12px;">
                                 Licenciada en Periodismo y Comunicación Social de la Universidad del Desarrollo de Concepción. Se recibió del Programa de Comunicación Corporativa de la Universidad Católica de Chile. También realizó el Diplomado en Responsabilidad Social Empresarial de la Universidad Adolfo Ibáñez. 
+                                <br/><br/>
 
                                 En marzo de 1999 comenzó sus actividades profesionales en Canal 13, donde se desempeñó como Periodista de la Dirección de Comunicaciones Corporativas. En agosto de 2000, ingresó a Compañías de Seguros Cruz del Sur, a cargo del Departamento de Comunicaciones. En junio de 2005 se trasladó a España por motivos personales, donde recibió la homologación de su título profesional en ese país.
+                                <br/>
                                 En el año 2008 se incorporó a Cimagen Comunicaciones donde trabajó hasta mediados del 2010. Desde entonces,  se dedicó a algunos proyectos independientes y como relatora de cursos.
                                 En agosto de 2013 regresa al equipo de Cimagen, en calidad de Asociada y asumiendo la dirección de cuentas. 
+                                <br/>
                                 Se graduó del Colegio Madres Domínicas de Concepción. 
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
+            <img src="recursos/14ans.jpg" style="position: absolute;margin: 10px 0px 0px 40px;">
             <div id="titulo" style="position: relative;">
                 <br/>
-                <img src="recursos/logos/2.jpg" style="padding-left: 10px;">
+                <img src="recursos/logos/2.jpg" style="padding-top: 6px;">
             </div>
             <br/><br/><br/><br/><br/><br/><br/>
             <table border="0px" style="position: absolute;left: -5px;width: 100%; height: 400px;top: 158px; border-collapse: separate;
@@ -477,7 +486,7 @@
                                         $('#ima2').fadeOut('slow');
                                         $('#ima3').fadeOut('slow');" class="sombra" style="border-bottom: 1px solid #FFFFFF; vertical-align: top;width: 200px;">
                                     <div id="ima1" style="display: table-cell;vertical-align: bottom;cursor: pointer;width: 200px; height: 319px; background-image: url('recursos/socias/i-chocano.jpg');">
-                                        <div id="i1" style="background:rgba(0,0,0,0.2);width: 200px; height: 65px;">
+                                        <div id="i1" style="background:rgba(0,0,0,0.5);width: 200px; height: 65px;">
                                             <label style="color: #FFFFFF;font-size: 18px; font-family: 'Sintony', sans-serif;font-weight: 500;">
                                                 INÉS CHOCANO<br/>
                                                 LA ROSA
@@ -488,7 +497,7 @@
                                 <td style="width: 10px;"></td>
                                 <td id="td2" onclick="movP2();" class="sombra" style="border-bottom: 1px solid #FFFFFF; vertical-align: top; width: 200px;">
                                     <div id="ima2" style="display: table-cell;vertical-align: bottom;cursor: pointer;width: 200px; height: 319px; background-image: url('recursos/socias/a-correa.jpg');">
-                                        <div id="i2" style="background:rgba(0,0,0,0.2);width: 200px; height: 65px;">
+                                        <div id="i2" style="background:rgba(0,0,0,0.5);width: 200px; height: 65px;">
                                             <label style="color: #FFFFFF;font-size: 18px; font-family: 'Sintony', sans-serif;font-weight: 500;">
                                                 ALICIA CORREA<br/>
                                                 LARRAÍN

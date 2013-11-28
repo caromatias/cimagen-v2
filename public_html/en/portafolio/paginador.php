@@ -36,12 +36,12 @@ if($resultado == true)
     while($reg = mysql_fetch_array($resultado))
     {
         echo "<td style='vertical-align: top; text-align: center;'>
-                                                                <!--<img id='resul".$contadorResul."' src='".substr($reg[2], 6)."' style='display: none;cursor: pointer;width: 111px; height: 322px;' onclick=\"ima('".$urls."','".$cantidad."');\" onmouseover='muestra(".$reg[0].");' onmouseout='nom(".$reg[0].");';/>-->
+                                                                <!--<img id='resul".$contadorResul."' src='".substr($reg[2], 6)."' style='display: none;cursor: pointer;width: 111px; height: 322px; border: 1px solid #ffffff;' onclick=\"ima('".$urls."','".$cantidad."');\" onmouseover='muestra(".$reg[0].");' onmouseout='nom(".$reg[0].");';/>-->
                                                                 <a class='group".$contadorResul." cboxElement' href='".substr($reg[4], 6)."'>
-                                                                    <img id='resul".$contadorResul."' src='".substr($reg[2], 6)."' style='display: none;cursor: pointer;width: 111px; height: 322px;' onmouseover='muestra(".$reg[0].");' onmouseout='nom(".$reg[0].");';/>
+                                                                    <img id='resul".$contadorResul."' src='".substr($reg[2], 6)."' style='display: none;cursor: pointer;width: 109px; height: 322px; border: 1px solid #ffffff;' onmouseover='muestra(".$reg[0].");' onmouseout='nom(".$reg[0].");';/>
                                                                 </a>
                                                                 <br>
-                                                                <div id='".$reg[0]."' style='display: none;'><center><div class='triangulo_inf'>.</div><label style='font-size: 14px;;font-family: 'Sintony', sans-serif;'>".$reg[1]."</label></center></div>";
+                                                                <div id='".$reg[0]."' style='display: none;'><center><div class='triangulo_inf'></div><label style='font-size: 14px;;font-family: Sintony, sans-serif;'>".$reg[1]."</label></center></div>";
         for($i = 5; $i <= 8; $i++)
         {
             if($reg[$i] != "")
